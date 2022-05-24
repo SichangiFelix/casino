@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:casino/screens/sign_in_screen.dart';
-import 'package:casino/screens/registration_screen.dart';
-import 'package:casino/screens/payment_screen.dart';
+import 'package:flutter/cupertino.dart';
+import 'package:casino/screens/home.dart';
 
 void main() {
   runApp(const MyApp());
@@ -13,9 +12,10 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const CupertinoApp(
       title: 'Flutter',
-      theme: ThemeData(
+      debugShowCheckedModeBanner: false,
+      theme: CupertinoThemeData(
         // This is the theme of your application.
         //
         // Try running your application with "flutter run". You'll see the
@@ -25,14 +25,16 @@ class MyApp extends StatelessWidget {
         // or simply save your changes to "hot reload" in a Flutter IDE).
         // Notice that the counter didn't reset back to zero; the application
         // is not restarted.
-        primarySwatch: Colors.blue,
+        primaryColor: Colors.blue,
       ),
-      initialRoute: SignIn.id,
-      routes: {
-        SignIn.id : (context)=>const SignIn(),
-        Registration.id : (context) =>const Registration(),
-        Payment.id : (context) =>const Payment(),
-      },
+
+      home: Home(),
+      // initialRoute: SignIn.id,
+      // routes: {
+      //   SignIn.id : (context)=>const SignIn(),
+      //   Registration.id : (context) =>const Registration(),
+      //   Payment.id : (context) =>const Payment(),
+      // },
     );
   }
 }

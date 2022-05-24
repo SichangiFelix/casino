@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class Payment extends StatefulWidget {
@@ -114,7 +115,9 @@ class _PaymentState extends State<Payment> {
               margin: const EdgeInsets.only(bottom: 20.0),
             ),
             ElevatedButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(context, CupertinoPageRoute(builder: (context) => Test()));
+              },
               child: const Text('Pay Now',
                 style: TextStyle(
                   color: Colors.indigo,
@@ -133,3 +136,25 @@ class _PaymentState extends State<Payment> {
     );
   }
 }
+
+class Test extends StatefulWidget {
+  const Test({Key? key}) : super(key: key);
+
+  @override
+  State<Test> createState() => _TestState();
+}
+
+class _TestState extends State<Test> {
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      decoration: BoxDecoration(
+        color: Colors.white10,
+      ),
+      child: Center(
+        child: Text("Wewe i am working"),
+      ),
+    );
+  }
+}
+
