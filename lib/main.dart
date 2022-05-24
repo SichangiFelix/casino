@@ -29,9 +29,9 @@ class MyApp extends StatelessWidget {
       ),
       initialRoute: SignIn.id,
       routes: {
-        SignIn.id : (context)=>SignIn(),
-        Registration.id : (context) => Registration(),
-        Payment.id : (context) => Payment(),
+        SignIn.id : (context)=>const SignIn(),
+        Registration.id : (context) =>const Registration(),
+        Payment.id : (context) =>const Payment(),
       },
     );
   }
