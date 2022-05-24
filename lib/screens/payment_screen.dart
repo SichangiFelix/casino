@@ -11,8 +11,8 @@ class Payment extends StatefulWidget {
 
 class _PaymentState extends State<Payment> {
 
-  int time = 0200;//The time displayed on the top of the page
-  int firstSelected = 0, secondSelect = 0, thirdSelected = 0, fourthSelected = 0, fifthSelected = 0;
+  int time = 0200, possibleWin = 275000;//The time displayed on the top of the page
+  int firstSelected = 0, secondSelected = 0, thirdSelected = 0, fourthSelected = 0, fifthSelected = 0;
 
   @override
   Widget build(BuildContext context) {
@@ -32,7 +32,7 @@ class _PaymentState extends State<Payment> {
             Container(child: Text('$time',
               style: const TextStyle(
                 color: Colors.white,
-                fontSize: 16.0,
+                fontSize: 20.0,
               ),
             ),
               margin: const EdgeInsets.only(top: 25.0),
@@ -40,7 +40,7 @@ class _PaymentState extends State<Payment> {
             Container(
               margin: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 38.0),
               padding: const EdgeInsets.symmetric(vertical: 40.0, horizontal: 10.0),
-              height: 340.0,
+              height: 350.0,
               decoration: const BoxDecoration(
                 borderRadius: BorderRadius.all(Radius.circular(28.0)),
                 color: Colors.white,
@@ -50,8 +50,8 @@ class _PaymentState extends State<Payment> {
                   const Text('Selected Numbers',
                   style: TextStyle(fontSize: 18.0),
                   ),
-                  Container(child: Text('$firstSelected, $secondSelect, $thirdSelected, $fourthSelected, $fifthSelected',
-                    style: const TextStyle(fontSize: 18.0),
+                  Container(child: Text('$firstSelected, $secondSelected, $thirdSelected, $fourthSelected, $fifthSelected',
+                    style: const TextStyle(fontSize: 24.0),
                   ),
                     margin: const EdgeInsets.only(bottom: 30.0, top: 12.0),
                   ),  //display selected numbers here
@@ -64,7 +64,12 @@ class _PaymentState extends State<Payment> {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Container(
-                          child: Center(child: Text('1')),
+                          child: const Center(child: Text('1',
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 18.0,
+                            ),
+                          )),
                           decoration: BoxDecoration(
                             color: Colors.indigo,
                             borderRadius: BorderRadius.circular(8.0),
@@ -72,9 +77,14 @@ class _PaymentState extends State<Payment> {
                           height: 40.0,
                           width: 40.0,
                         ),
-                        SizedBox(width: 16.0,),
+                        const SizedBox(width: 16.0,),
                         Container(
-                          child: Center(child: Text('2')),
+                          child: const Center(child: Text('2',
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 18.0,
+                            ),
+                          )),
                           decoration: BoxDecoration(
                             color: Colors.indigo,
                             borderRadius: BorderRadius.circular(8.0),
@@ -88,7 +98,7 @@ class _PaymentState extends State<Payment> {
                   const Text('Possible Win',
                     style: TextStyle(fontSize: 18.0),
                   ),
-                  Container(child: Text('R1 $time',
+                  Container(child: Text('R1 $possibleWin',
                     style: const TextStyle(fontSize: 18.0),
                   ),
                     margin: const EdgeInsets.only(top: 8.0),
@@ -108,6 +118,7 @@ class _PaymentState extends State<Payment> {
               child: const Text('Pay Now',
                 style: TextStyle(
                   color: Colors.indigo,
+                  fontSize: 20.0,
                 ),
               ),
               style: ElevatedButton.styleFrom(
