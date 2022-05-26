@@ -44,149 +44,151 @@ class _SignInState extends State<SignIn> {
               borderRadius: BorderRadius.all(Radius.circular(22.0)),
               color: Colors.white,
             ),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                Form(
-                  key: formKey,
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      TextFormField(
-                        validator: (value){
-                          if(value!.isEmpty || value!.length < 6 ){
-                            return 'Your user must be at least 6 characters and can not be empty';
-                          }
-                        },
-                        onSaved: (value){
-                          user = value!;
-                        },
-                        decoration: InputDecoration(
-                          prefixIcon: const Icon(Icons.person),
-                          hintText: 'Username or Email Address',
-                          border: OutlineInputBorder(borderRadius: BorderRadius.circular(8.0)),
-                          fillColor: Colors.grey.shade300,
-                          filled: true,
-                          contentPadding: const EdgeInsets.symmetric(vertical: 2.0,),
-                        ),
-                      ),
-                      Container(
-                        margin: const EdgeInsets.symmetric(vertical: 30.0),
-                        child: Column(
-                          children: [
-                            TextFormField(
-                              decoration: InputDecoration(
-                                hintText: 'Password',
-                                prefixIcon: const Icon(Icons.lock),
-                                border: OutlineInputBorder(borderRadius: BorderRadius.circular(8.0)),
-                                suffixIcon: const Icon(Icons.remove_red_eye_outlined),
-                                filled: true,
-                                fillColor: Colors.grey.shade300,
-                                contentPadding: const EdgeInsets.symmetric(vertical: 2.0,),
-                              ),
-                              validator: (value){
-                                if(value!.isEmpty){
-                                  return 'This field is required';
-                                }else if(value.length < 8){
-                                  return 'Your password has to be at least 8 characters';
-                                }
-                              },
-                              onSaved: (value){
-                                pass = value!;
-                              },
-                              obscureText: true,
-                            ),
-                            Padding(
-                              padding:
-                                  const EdgeInsets.symmetric(vertical: 8.0),
-                              child: Row(
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceBetween,
-                                children: [
-                                  Row(
-                                    children: [
-                                      Checkbox(value: rememberMe, onChanged: (newValue){
-                                        //Logic to remember the user
-                                      },),
-                                      const Text('Remember me'),
-                                    ],
-                                  ),
-                                  const Text('Forgot Password?'),
-                                ],
-                              ),
-                            )
-                          ],
-                        ),
-                      )
-                    ],
-                  ),
-                ),
-                ElevatedButton(
-                  onPressed: () {
-                    final isValid = formKey.currentState!.validate();
-                    if(isValid){
-                      formKey.currentState!.save();
-                      ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text('Successfully signed in')));
-                    }else{
-                      ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text('Invalid credentials')));
-                    }
-                    //After form validation and user authentication...
-                    //Navigator.pushNamed(context, Payment.id);
-                  },
-                  child: const Text('Sign In Account'),
-                  style: ElevatedButton.styleFrom(
-                    textStyle: const TextStyle(
-                      fontSize: 19.0,
-                    ),
-                    primary: Colors.deepPurple,
-                    shape: const StadiumBorder(),
-                    fixedSize: const Size(300.0, 50.0),
-                  )
-                ),
-                Container(
-                  margin: const EdgeInsets.symmetric(vertical: 18.0),
-                  child: Column(
-                    children: [
-                      const Text('or'),
-                      Container(child: const Text('Social Media'),
-                        margin: const EdgeInsets.symmetric(vertical: 14.0),
-                      ),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          const Image(image: AssetImage('images/facebook.png'),
-                            height: 40.0,
-                            width: 40.0,
+            child: SingleChildScrollView(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  Form(
+                    key: formKey,
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        TextFormField(
+                          validator: (value){
+                            if(value!.isEmpty || value!.length < 6 ){
+                              return 'Your user must be at least 6 characters and can not be empty';
+                            }
+                          },
+                          onSaved: (value){
+                            user = value!;
+                          },
+                          decoration: InputDecoration(
+                            prefixIcon: const Icon(Icons.person),
+                            hintText: 'Username or Email Address',
+                            border: OutlineInputBorder(borderRadius: BorderRadius.circular(8.0)),
+                            fillColor: Colors.grey.shade300,
+                            filled: true,
+                            contentPadding: const EdgeInsets.symmetric(vertical: 2.0,),
                           ),
-                          Container(
-                            margin: const EdgeInsets.symmetric(horizontal: 10.0),
-                            child: const Image(image: AssetImage('images/google.png'),
+                        ),
+                        Container(
+                          margin: const EdgeInsets.symmetric(vertical: 30.0),
+                          child: Column(
+                            children: [
+                              TextFormField(
+                                decoration: InputDecoration(
+                                  hintText: 'Password',
+                                  prefixIcon: const Icon(Icons.lock),
+                                  border: OutlineInputBorder(borderRadius: BorderRadius.circular(8.0)),
+                                  suffixIcon: const Icon(Icons.remove_red_eye_outlined),
+                                  filled: true,
+                                  fillColor: Colors.grey.shade300,
+                                  contentPadding: const EdgeInsets.symmetric(vertical: 2.0,),
+                                ),
+                                validator: (value){
+                                  if(value!.isEmpty){
+                                    return 'This field is required';
+                                  }else if(value.length < 8){
+                                    return 'Your password has to be at least 8 characters';
+                                  }
+                                },
+                                onSaved: (value){
+                                  pass = value!;
+                                },
+                                obscureText: true,
+                              ),
+                              Padding(
+                                padding:
+                                    const EdgeInsets.symmetric(vertical: 8.0),
+                                child: Row(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
+                                  children: [
+                                    Row(
+                                      children: [
+                                        Checkbox(value: rememberMe, onChanged: (newValue){
+                                          //Logic to remember the user
+                                        },),
+                                        const Text('Remember me'),
+                                      ],
+                                    ),
+                                    const Text('Forgot Password?'),
+                                  ],
+                                ),
+                              )
+                            ],
+                          ),
+                        )
+                      ],
+                    ),
+                  ),
+                  ElevatedButton(
+                    onPressed: () {
+                      final isValid = formKey.currentState!.validate();
+                      if(isValid){
+                        formKey.currentState!.save();
+                        ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text('Successfully signed in')));
+                      }else{
+                        ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text('Invalid credentials')));
+                      }
+                      //After form validation and user authentication...
+                      //Navigator.pushNamed(context, Payment.id);
+                    },
+                    child: const Text('Sign In Account'),
+                    style: ElevatedButton.styleFrom(
+                      textStyle: const TextStyle(
+                        fontSize: 19.0,
+                      ),
+                      primary: Colors.deepPurple,
+                      shape: const StadiumBorder(),
+                      fixedSize: const Size(300.0, 50.0),
+                    )
+                  ),
+                  Container(
+                    margin: const EdgeInsets.symmetric(vertical: 18.0),
+                    child: Column(
+                      children: [
+                        const Text('or'),
+                        Container(child: const Text('Social Media'),
+                          margin: const EdgeInsets.symmetric(vertical: 14.0),
+                        ),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            const Image(image: AssetImage('images/facebook.png'),
                               height: 40.0,
                               width: 40.0,
                             ),
+                            Container(
+                              margin: const EdgeInsets.symmetric(horizontal: 10.0),
+                              child: const Image(image: AssetImage('images/google.png'),
+                                height: 40.0,
+                                width: 40.0,
+                              ),
+                            ),
+                          const Image(image: AssetImage('images/twitter.png'),
+                            height: 40.0,
+                            width: 40.0,
                           ),
-                        const Image(image: AssetImage('images/twitter.png'),
-                          height: 40.0,
-                          width: 40.0,
+                          ],
                         ),
-                        ],
-                      ),
+                      ],
+                    ),
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      const Text('If you have no account'),
+                      TextButton(
+                        onPressed: () {
+                          Navigator.pushNamed(context, Registration.id);
+                        },
+                        child: const Text('Sign Up'),
+                      )
                     ],
                   ),
-                ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    const Text('If you have no account'),
-                    TextButton(
-                      onPressed: () {
-                        Navigator.pushNamed(context, Registration.id);
-                      },
-                      child: const Text('Sign Up'),
-                    )
-                  ],
-                ),
-              ],
+                ],
+              ),
             ),
           ),
         ),
