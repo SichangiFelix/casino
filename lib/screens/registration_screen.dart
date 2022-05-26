@@ -12,6 +12,8 @@ class Registration extends StatefulWidget {
 
 class _RegistrationState extends State<Registration> {
   bool hasAccepted = false;
+  final formKey = GlobalKey<FormState>();
+  String fName = '', lName = '', email = '', password = '', rePassword = '';
 
   @override
   Widget build(BuildContext context) {
@@ -44,160 +46,223 @@ class _RegistrationState extends State<Registration> {
               borderRadius: BorderRadius.all(Radius.circular(22.0)),
               color: Colors.white,
             ),
-            child: Column(
-              children: [
-                Column(
-                  children: [
-                    TextFormField(
-                      decoration: InputDecoration(
-                        prefixIcon: const Icon(Icons.person),
-                        hintText: 'First Name',
-                        border: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(8.0)),
-                        fillColor: Colors.grey,
-                        filled: true,
-                        contentPadding: const EdgeInsets.symmetric(
-                          vertical: 2.0,
-                        ),
-                      ),
-                    ),
-                    Container(
-                      margin: const EdgeInsets.symmetric(vertical: 18.0),
-                      child: TextFormField(
-                        decoration: InputDecoration(
-                          prefixIcon: const Icon(Icons.person),
-                          hintText: 'Last Name',
-                          border: OutlineInputBorder(
-                              borderRadius: BorderRadius.circular(8.0)),
-                          fillColor: Colors.grey,
-                          filled: true,
-                          contentPadding: const EdgeInsets.symmetric(
-                            vertical: 2.0,
-                          ),
-                        ),
-                      ),
-                    ),
-                    TextFormField(
-                      decoration: InputDecoration(
-                        prefixIcon: const Icon(Icons.send),
-                        hintText: 'Email',
-                        border: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(8.0)),
-                        fillColor: Colors.grey,
-                        filled: true,
-                        contentPadding: const EdgeInsets.symmetric(
-                          vertical: 2.0,
-                        ),
-                      ),
-                    ),
-                    Container(
-                      margin: const EdgeInsets.symmetric(vertical: 18.0),
-                      child: TextFormField(
-                        decoration: InputDecoration(
-                          prefixIcon: const Icon(Icons.lock),
-                          hintText: 'Password',
-                          suffixIcon: const Icon(Icons.remove_red_eye),
-                          border: OutlineInputBorder(
-                              borderRadius: BorderRadius.circular(8.0)),
-                          fillColor: Colors.grey,
-                          filled: true,
-                          contentPadding: const EdgeInsets.symmetric(
-                            vertical: 2.0,
-                          ),
-                        ),
-                      ),
-                    ),
-                    TextFormField(
-                      decoration: InputDecoration(
-                        prefixIcon: const Icon(Icons.lock),
-                        hintText: 'Re-Password',
-                        suffixIcon: const Icon(Icons.remove_red_eye),
-                        border: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(8.0)),
-                        fillColor: Colors.grey,
-                        filled: true,
-                        contentPadding: const EdgeInsets.symmetric(
-                          vertical: 2.0,
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
-                Row(children: [
-                  Checkbox(
-                    value: hasAccepted,
-                    onChanged: (newValue) {
-                      //Logic for having accepted the terms and conditions
-                    },
-                  ),
-                  const Text('I accept the'),
-                  TextButton(
-                    onPressed: () {
-                      Navigator.pushNamed(context, Registration.id);
-                    },
-                    child: const Text('Terms & Conditions'),
-                  )
-                ]),
-                Container(
-                  margin: const EdgeInsets.symmetric(vertical: 15.0),
-                  child: ElevatedButton(
-                      onPressed: () {},
-                      child: const Text('Sign In Account'),
-                      style: ElevatedButton.styleFrom(
-                          textStyle: const TextStyle(
-                            fontSize: 19.0,
-                          ),
-                          primary: Colors.indigo,
-                          fixedSize: const Size(300.0, 52.0),
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(12.0),
-                          ))),
-                ),
-                Column(
-                  children: [
-                    const Text('or'),
-                    Container(
-                      child: const Text('Social Media'),
-                      margin: const EdgeInsets.symmetric(vertical: 12.0),
-                    ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
+            child: SingleChildScrollView(
+              child: Column(
+                children: [
+                  Form(
+                    key: formKey,
+                    child: Column(
                       children: [
-                        const Image(
-                          image: AssetImage('images/facebook.png'),
-                          height: 40.0,
-                          width: 40.0,
+                        TextFormField(
+                          validator: (value){
+                            if(value!.isEmpty){
+                              return 'This field is required';
+                            }
+                          },
+                          onSaved: (value){
+                            fName = value!;
+                          },
+                          decoration: InputDecoration(
+                            prefixIcon: const Icon(Icons.person),
+                            hintText: 'First Name',
+                            border: OutlineInputBorder(
+                                borderRadius: BorderRadius.circular(8.0)),
+                            fillColor: Colors.grey.shade200,
+                            filled: true,
+                            contentPadding: const EdgeInsets.symmetric(
+                              vertical: 2.0,
+                            ),
+                          ),
                         ),
                         Container(
-                          margin: const EdgeInsets.symmetric(horizontal: 10.0),
-                          child: const Image(
-                            image: AssetImage('images/google.png'),
+                          margin: const EdgeInsets.symmetric(vertical: 18.0),
+                          child: TextFormField(
+                            validator: (value){
+                              if(value!.isEmpty){
+                                return 'This field is required';
+                              }
+                            },
+                            onSaved: (value){
+                              lName = value!;
+                            },
+                            decoration: InputDecoration(
+                              prefixIcon: const Icon(Icons.person),
+                              hintText: 'Last Name',
+                              border: OutlineInputBorder(
+                                  borderRadius: BorderRadius.circular(8.0)),
+                              fillColor: Colors.grey.shade200,
+                              filled: true,
+                              contentPadding: const EdgeInsets.symmetric(
+                                vertical: 2.0,
+                              ),
+                            ),
+                          ),
+                        ),
+                        TextFormField(
+                          validator: (value){
+                            if(value!.isEmpty){
+                              return 'This field is required';
+                            }else if(!value.contains('@') || !value.contains('.com')){
+                              return 'Invalid email address';
+                            }
+                          },
+                          onSaved: (value){
+                            email = value!;
+                          },
+                          decoration: InputDecoration(
+                            prefixIcon: const Icon(Icons.send),
+                            hintText: 'Email',
+                            border: OutlineInputBorder(
+                                borderRadius: BorderRadius.circular(8.0)),
+                            fillColor: Colors.grey.shade200,
+                            filled: true,
+                            contentPadding: const EdgeInsets.symmetric(
+                              vertical: 2.0,
+                            ),
+                          ),
+                        ),
+                        Container(
+                          margin: const EdgeInsets.symmetric(vertical: 18.0),
+                          child: TextFormField(
+                            validator: (value){
+                              if(value!.isEmpty){
+                                return 'This field is required';
+                              }
+                              else if(value.length < 8){
+                                return 'Password must be at least 8 characters';
+                              }
+                            },
+                            onSaved: (value){
+                              password = value!;
+                            },
+                            decoration: InputDecoration(
+                              prefixIcon: const Icon(Icons.lock),
+                              hintText: 'Password',
+                              suffixIcon: const Icon(Icons.remove_red_eye),
+                              border: OutlineInputBorder(
+                                  borderRadius: BorderRadius.circular(8.0)),
+                              fillColor: Colors.grey.shade200,
+                              filled: true,
+                              contentPadding: const EdgeInsets.symmetric(
+                                vertical: 2.0,
+                              ),
+                            ),
+                          ),
+                        ),
+                        TextFormField(
+                          validator: (value){
+                            if(value != password){
+                              return 'Make sure the passwords match';
+                            }
+                            else if(value!.isEmpty){
+                              return 'This field is required';
+                            }
+                          },
+                          onSaved: (value){
+                            rePassword = value!;
+                          },
+                          decoration: InputDecoration(
+                            prefixIcon: const Icon(Icons.lock),
+                            hintText: 'Re-Password',
+                            suffixIcon: const Icon(Icons.remove_red_eye),
+                            border: OutlineInputBorder(
+                                borderRadius: BorderRadius.circular(8.0)),
+                            fillColor: Colors.grey.shade200,
+                            filled: true,
+                            contentPadding: const EdgeInsets.symmetric(
+                              vertical: 2.0,
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                  Row(children: [
+                    Checkbox(
+                      value: hasAccepted,
+                      onChanged: (newValue) {
+                        //Logic for having accepted the terms and conditions
+                      },
+                    ),
+                    const Text('I accept the'),
+                    TextButton(
+                      onPressed: () {
+                        Navigator.pushNamed(context, Registration.id);
+                      },
+                      child: const Text('Terms & Conditions'),
+                    )
+                  ]),
+                  Container(
+                    margin: const EdgeInsets.symmetric(vertical: 15.0),
+                    child: ElevatedButton(
+                        onPressed: () {
+                          final isValid  = formKey.currentState!.validate();
+                          if(isValid){
+                            formKey.currentState!.save();
+                            //code to send data to db
+                            ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text('Successfully registered')));
+                            //Code to navigate to homescreen
+                          }else{
+                            ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text('Confirm that you have entered correct details')));
+                          }
+                        },
+                        child: const Text('Sign In Account'),
+                        style: ElevatedButton.styleFrom(
+                            textStyle: const TextStyle(
+                              fontSize: 19.0,
+                            ),
+                            primary: Colors.indigo,
+                            fixedSize: const Size(300.0, 52.0),
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(12.0),
+                            ))),
+                  ),
+                  Column(
+                    children: [
+                      const Text('or'),
+                      Container(
+                        child: const Text('Social Media'),
+                        margin: const EdgeInsets.symmetric(vertical: 12.0),
+                      ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          const Image(
+                            image: AssetImage('images/facebook.png'),
                             height: 40.0,
                             width: 40.0,
                           ),
-                        ),
-                        const Image(
-                          image: AssetImage('images/twitter.png'),
-                          height: 40.0,
-                          width: 40.0,
-                        ),
-                      ],
-                    ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        const Text('If you have an account'),
-                        TextButton(
-                          onPressed: () {
-                            Navigator.pushNamed(context, SignIn.id);
-                          },
-                          child: const Text('Sign IN'),
-                        )
-                      ],
-                    ),
-                  ],
-                ),
-              ],
+                          Container(
+                            margin: const EdgeInsets.symmetric(horizontal: 10.0),
+                            child: const Image(
+                              image: AssetImage('images/google.png'),
+                              height: 40.0,
+                              width: 40.0,
+                            ),
+                          ),
+                          const Image(
+                            image: AssetImage('images/twitter.png'),
+                            height: 40.0,
+                            width: 40.0,
+                          ),
+                        ],
+                      ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          const Text('If you have an account'),
+                          TextButton(
+                            onPressed: () {
+                              Navigator.pushNamed(context, SignIn.id);
+                            },
+                            child: const Text('Sign IN'),
+                          )
+                        ],
+                      ),
+                    ],
+                  ),
+                ],
+              ),
             ),
           ),
         ),
