@@ -14,6 +14,9 @@ class SignIn extends StatefulWidget {
 class _SignInState extends State<SignIn> {
 
   bool rememberMe = false;
+  String user = "";
+  String pass = "";
+  final formKey = GlobalKey<FormState>();
 
   @override
   Widget build(BuildContext context) {
@@ -45,60 +48,88 @@ class _SignInState extends State<SignIn> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                Column(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    TextFormField(
-                      decoration: InputDecoration(
-                        prefixIcon: const Icon(Icons.person),
-                        hintText: 'Username or Email Address',
-                        border: OutlineInputBorder(borderRadius: BorderRadius.circular(8.0)),
-                        fillColor: Colors.grey,
-                        filled: true,
-                        contentPadding: const EdgeInsets.symmetric(vertical: 2.0,),
+                Form(
+                  key: formKey,
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      TextFormField(
+                        validator: (value){
+                          if(value!.isEmpty || value!.length < 6 ){
+                            return 'Your user must be at least 6 characters and can not be empty';
+                          }
+                        },
+                        onSaved: (value){
+                          user = value!;
+                          print('$user');
+                        },
+                        decoration: InputDecoration(
+                          prefixIcon: const Icon(Icons.person),
+                          hintText: 'Username or Email Address',
+                          border: OutlineInputBorder(borderRadius: BorderRadius.circular(8.0)),
+                          fillColor: Colors.grey,
+                          filled: true,
+                          contentPadding: const EdgeInsets.symmetric(vertical: 2.0,),
+                        ),
                       ),
-                    ),
-                    Container(
-                      margin: const EdgeInsets.symmetric(vertical: 30.0),
-                      child: Column(
-                        children: [
-                          TextFormField(
-                            decoration: InputDecoration(
-                              hintText: 'Password',
-                              prefixIcon: const Icon(Icons.lock),
-                              border: OutlineInputBorder(borderRadius: BorderRadius.circular(8.0)),
-                              suffixIcon: const Icon(Icons.remove_red_eye_outlined),
-                              filled: true,
-                              contentPadding: const EdgeInsets.symmetric(vertical: 2.0,),
+                      Container(
+                        margin: const EdgeInsets.symmetric(vertical: 30.0),
+                        child: Column(
+                          children: [
+                            TextFormField(
+                              decoration: InputDecoration(
+                                hintText: 'Password',
+                                prefixIcon: const Icon(Icons.lock),
+                                border: OutlineInputBorder(borderRadius: BorderRadius.circular(8.0)),
+                                suffixIcon: const Icon(Icons.remove_red_eye_outlined),
+                                filled: true,
+                                contentPadding: const EdgeInsets.symmetric(vertical: 2.0,),
+                              ),
+                              validator: (value){
+                                if(value!.isEmpty || value!.length < 8 ){
+                                  return 'Your password has to be at least 8 characters';
+                                }
+                              },
+                              onSaved: (value){
+                                pass = value!;
+                                print('$pass');
+                              },
+                              obscureText: true,
                             ),
-                            obscureText: true,
-                          ),
-                          Padding(
-                            padding:
-                                const EdgeInsets.symmetric(vertical: 8.0),
-                            child: Row(
-                              mainAxisAlignment:
-                                  MainAxisAlignment.spaceBetween,
-                              children: [
-                                Row(
-                                  children: [
-                                    Checkbox(value: rememberMe, onChanged: (newValue){
-                                      //Logic to remember the user
-                                    },),
-                                    const Text('Remember me'),
-                                  ],
-                                ),
-                                const Text('Forgot Password?'),
-                              ],
-                            ),
-                          )
-                        ],
-                      ),
-                    )
-                  ],
+                            Padding(
+                              padding:
+                                  const EdgeInsets.symmetric(vertical: 8.0),
+                              child: Row(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
+                                children: [
+                                  Row(
+                                    children: [
+                                      Checkbox(value: rememberMe, onChanged: (newValue){
+                                        //Logic to remember the user
+                                      },),
+                                      const Text('Remember me'),
+                                    ],
+                                  ),
+                                  const Text('Forgot Password?'),
+                                ],
+                              ),
+                            )
+                          ],
+                        ),
+                      )
+                    ],
+                  ),
                 ),
                 ElevatedButton(
                   onPressed: () {
+                    final isValid = formKey.currentState!.validate();
+                    if(isValid){
+                      formKey.currentState!.save();
+                      ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text('Successfully signed in')));
+                    }else{
+                      ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text('Invalid credentials')));
+                    }
                     //After form validation and user authentication...
                     Navigator.pushNamed(context, Payment.id);
                   },
@@ -109,7 +140,7 @@ class _SignInState extends State<SignIn> {
                     ),
                     primary: Colors.deepPurple,
                     shape: const StadiumBorder(),
-                    fixedSize: const Size(300.0, 50.0)
+                    fixedSize: const Size(300.0, 50.0),
                   )
                 ),
                 Container(
