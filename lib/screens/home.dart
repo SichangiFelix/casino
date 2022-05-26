@@ -32,11 +32,14 @@ class _HomeState extends State<Home> {
         switch(index){
           case 0:
             return CupertinoTabView(builder: (context){
-              return const CupertinoPageScaffold(child: Payment(),);
+              return const CupertinoPageScaffold(child: Payment(),
+                backgroundColor: Colors.deepPurple,
+              );
             });
           case 1:
             return CupertinoTabView(builder: (context){
-              return const CupertinoPageScaffold(child: SignIn(),);
+              return const CupertinoPageScaffold(child: SignIn(),
+              );
             });
           case 2:
             return CupertinoTabView(builder: (context){
