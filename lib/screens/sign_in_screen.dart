@@ -1,4 +1,3 @@
-import 'package:casino/screens/payment_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:casino/screens/registration_screen.dart';
 
@@ -61,13 +60,12 @@ class _SignInState extends State<SignIn> {
                         },
                         onSaved: (value){
                           user = value!;
-                          print('$user');
                         },
                         decoration: InputDecoration(
                           prefixIcon: const Icon(Icons.person),
                           hintText: 'Username or Email Address',
                           border: OutlineInputBorder(borderRadius: BorderRadius.circular(8.0)),
-                          fillColor: Colors.grey,
+                          fillColor: Colors.grey.shade300,
                           filled: true,
                           contentPadding: const EdgeInsets.symmetric(vertical: 2.0,),
                         ),
@@ -83,16 +81,18 @@ class _SignInState extends State<SignIn> {
                                 border: OutlineInputBorder(borderRadius: BorderRadius.circular(8.0)),
                                 suffixIcon: const Icon(Icons.remove_red_eye_outlined),
                                 filled: true,
+                                fillColor: Colors.grey.shade300,
                                 contentPadding: const EdgeInsets.symmetric(vertical: 2.0,),
                               ),
                               validator: (value){
-                                if(value!.isEmpty || value!.length < 8 ){
+                                if(value!.isEmpty){
+                                  return 'This field is required';
+                                }else if(value.length < 8){
                                   return 'Your password has to be at least 8 characters';
                                 }
                               },
                               onSaved: (value){
                                 pass = value!;
-                                print('$pass');
                               },
                               obscureText: true,
                             ),
@@ -126,12 +126,12 @@ class _SignInState extends State<SignIn> {
                     final isValid = formKey.currentState!.validate();
                     if(isValid){
                       formKey.currentState!.save();
-                      ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text('Successfully signed in')));
+                      ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text('Successfully signed in')));
                     }else{
-                      ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text('Invalid credentials')));
+                      ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text('Invalid credentials')));
                     }
                     //After form validation and user authentication...
-                    Navigator.pushNamed(context, Payment.id);
+                    //Navigator.pushNamed(context, Payment.id);
                   },
                   child: const Text('Sign In Account'),
                   style: ElevatedButton.styleFrom(
