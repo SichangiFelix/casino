@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:casino/screens/sign_in_screen.dart';
 import 'package:casino/screens/registration_screen.dart';
 import 'package:casino/screens/payment_screen.dart';
+import 'package:casino/splashscreen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -27,11 +28,12 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      initialRoute: SignIn.id,
+      initialRoute: Splash.id,
       routes: {
         SignIn.id : (context)=>const SignIn(),
         Registration.id : (context) =>const Registration(),
         Payment.id : (context) =>const Payment(),
+        Splash.id : (context) => const Splash(),
       },
     );
   }
