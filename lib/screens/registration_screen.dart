@@ -151,7 +151,7 @@ class _RegistrationState extends State<Registration> {
                         ),
                         TextFormField(
                           validator: (value){
-                            if(value != password){
+                            if(value != password){ //posible problem with comparison
                               return 'Make sure the passwords match';
                             }
                             else if(value!.isEmpty){
