@@ -18,19 +18,16 @@ class _RegistrationState extends State<Registration> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.deepPurple,
+      backgroundColor: Color(0xff2C334F),
       appBar: AppBar(
+        automaticallyImplyLeading: false,
         title: const Text(
           'Registration',
           style: TextStyle(
             fontSize: 17.0,
           ),
         ),
-        backgroundColor: Colors.deepPurple,
-        leading: const Icon(
-          Icons.abc,
-          color: Colors.deepPurple,
-        ),
+        backgroundColor: Color(0xff2C334F),
         elevation: 0,
       ),
       body: SafeArea(
@@ -211,7 +208,7 @@ class _RegistrationState extends State<Registration> {
                             textStyle: const TextStyle(
                               fontSize: 19.0,
                             ),
-                            primary: Colors.indigo,
+                            primary: Color(0xff4575C8),
                             fixedSize: const Size(300.0, 52.0),
                             shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(12.0),

@@ -1,3 +1,4 @@
+import 'package:casino/screens/payment_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:casino/screens/registration_screen.dart';
 
@@ -28,9 +29,9 @@ class _SignInState extends State<SignIn> {
         ),
         centerTitle: true,
         elevation: 0.0,
-        backgroundColor: Colors.deepPurple,
+        backgroundColor: Color(0xff2C334F),
       ),
-      backgroundColor: Colors.deepPurple,
+      backgroundColor: Color(0xff2C334F),
       body: SafeArea(
         child: SingleChildScrollView(
           physics: const BouncingScrollPhysics(),
@@ -132,14 +133,14 @@ class _SignInState extends State<SignIn> {
                         ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text('Invalid credentials')));
                       }
                       //After form validation and user authentication...
-                      //Navigator.pushNamed(context, Payment.id);
+                      Navigator.pushNamed(context, Payment.id);
                     },
                     child: const Text('Sign In Account'),
                     style: ElevatedButton.styleFrom(
                       textStyle: const TextStyle(
                         fontSize: 19.0,
                       ),
-                      primary: Colors.deepPurple,
+                      primary: Color(0xff4575C8),
                       shape: const StadiumBorder(),
                       fixedSize: const Size(300.0, 50.0),
                     )
