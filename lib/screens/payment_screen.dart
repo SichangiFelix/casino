@@ -1,9 +1,12 @@
+import 'package:casino/screens/first.dart';
+import 'package:casino/screens/second.dart';
 import 'package:flutter/material.dart';
 
 class Payment extends StatefulWidget {
-  const Payment({Key? key}) : super(key: key);
-
+final String  selectedNumbers;
+  Payment({ required this.selectedNumbers});
   static const String id = 'Payment';
+
 
   @override
   State<Payment> createState() => _PaymentState();
@@ -11,15 +14,21 @@ class Payment extends StatefulWidget {
 
 class _PaymentState extends State<Payment> {
 
+
   int time = 0200, possibleWin = 275000;//The time displayed on the top of the page
   int firstSelected = 0, secondSelected = 0, thirdSelected = 0, fourthSelected = 0, fifthSelected = 0;
 
   @override
   Widget build(BuildContext context) {
+
     return Scaffold(
-      backgroundColor: Color(0xff2C334F),
+      backgroundColor: Colors.indigo[900],
       appBar: AppBar(
-        backgroundColor: Color(0xff2C334F),
+        leading: IconButton(icon:const Icon(Icons.arrow_back_ios),onPressed: (){
+          Navigator.pop(context);
+
+        },),
+        backgroundColor: Colors.indigo[900],
         elevation: 0.0,
         title: const Text('Payment'),
         titleTextStyle: const TextStyle(
@@ -48,9 +57,11 @@ class _PaymentState extends State<Payment> {
               child: Column(
                 children: [
                   const Text('Selected Numbers',
-                  style: TextStyle(fontSize: 18.0),
+                    style: TextStyle(fontSize: 18.0),
                   ),
-                  Container(child: Text('$firstSelected, $secondSelected, $thirdSelected, $fourthSelected, $fifthSelected',
+                  Container(child: Text(
+                    // '$firstSelected, $secondSelected, $thirdSelected, $fourthSelected, $fifthSelected',
+                    widget.selectedNumbers,
                     style: const TextStyle(fontSize: 24.0),
                   ),
                     margin: const EdgeInsets.only(bottom: 30.0, top: 12.0),
@@ -114,7 +125,10 @@ class _PaymentState extends State<Payment> {
               margin: const EdgeInsets.only(bottom: 20.0),
             ),
             ElevatedButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context)=>First()));
+
+              },
               child: const Text('Pay Now',
                 style: TextStyle(
                   color: Colors.indigo,
@@ -122,9 +136,9 @@ class _PaymentState extends State<Payment> {
                 ),
               ),
               style: ElevatedButton.styleFrom(
-                primary: Colors.white,
-                minimumSize: const Size(240.0, 48.0),
-                shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10.0))
+                  primary: Colors.white,
+                  minimumSize: const Size(240.0, 48.0),
+                  shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10.0))
               ),
             )
           ],
