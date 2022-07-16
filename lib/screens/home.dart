@@ -1,9 +1,11 @@
+import 'package:casino/constants/colors.dart';
 import 'package:casino/screens/activity.dart';
 import 'package:casino/screens/privacy_&_policy.dart';
 import 'package:casino/screens/sign_in.dart';
 import 'package:casino/screens/third.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 class Home extends StatefulWidget {
   const Home({Key? key}) : super(key: key);
@@ -15,13 +17,13 @@ class Home extends StatefulWidget {
 class _HomeState extends State<Home> {
   final _scaffoldKey = GlobalKey<ScaffoldState>();
   late PageController pageController;
-  int pageIndex = 2;
+  int pageIndex = 0;
 
   @override
   void initState() {
     super.initState();
     pageController = PageController(
-       initialPage: 2,
+       initialPage: 0,
     );
   }
 
@@ -47,8 +49,8 @@ class _HomeState extends State<Home> {
       body: PageView(
         children: <Widget>[
           Activity(),
-          Container(),
           Third(),
+          Container(),
           Container(),
           Container(),
 
@@ -61,35 +63,46 @@ class _HomeState extends State<Home> {
       bottomNavigationBar: CupertinoTabBar(
         backgroundColor: Colors.white,
          inactiveColor: Colors.grey,
-        activeColor:Colors.amber,
+        activeColor: Colors.green,
 
         currentIndex: pageIndex,
         onTap: onTap,
-        items:const [
+        items:[
           BottomNavigationBarItem(
             // label: 'Timeline',
-            icon: Icon(Icons.add_home_outlined),
+            icon: SvgPicture.asset(
+                'assets/icons/home_icon.svg',
+              width: 22,
+            ),
           ),
           BottomNavigationBarItem(
             // label: 'Live feed',
-            icon: Icon(Icons.call_to_action_sharp),
+            icon: SvgPicture.asset(
+              'assets/icons/special_rectangle.svg',
+              width: 24,
+            ),
           ),
           BottomNavigationBarItem(
             // label: 'Upload',
-            icon: Icon(
-              Icons.sms,
-
-              // size: 35.0,
+            icon: SvgPicture.asset(
+              'assets/icons/message_icon.svg',
+              width: 24,
             ),
           ),
           BottomNavigationBarItem(
             // label: 'Search',
-            icon: Icon(Icons.favorite_border),
+            icon: SvgPicture.asset(
+              'assets/icons/favorites_icon.svg',
+              width: 24,
+            ),
 
           ),
           BottomNavigationBarItem(
             // label: 'Profile',
-            icon: Icon(Icons.person),
+            icon: SvgPicture.asset(
+              'assets/icons/account_icon.svg',
+              width: 20,
+            ),
           ),
         ],
       ),
