@@ -1,3 +1,4 @@
+import 'package:casino/constants/colors.dart';
 import 'package:casino/screens/first.dart';
 import 'package:casino/screens/second.dart';
 import 'package:casino/screens/sign_in.dart';
@@ -19,8 +20,8 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Casino',
       theme: ThemeData(
-
         primarySwatch: Colors.indigo,
+        scaffoldBackgroundColor: scaffoldColor,
       ),
       home: const SignIn(),
     );
