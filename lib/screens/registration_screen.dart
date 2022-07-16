@@ -1,8 +1,10 @@
+import 'package:casino/constants/colors.dart';
 import 'package:casino/screens/first.dart';
 import 'package:casino/screens/home.dart';
 import 'package:casino/screens/sign_in.dart';
 import 'package:casino/screens/third.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 
 
 class Registration extends StatefulWidget {
@@ -20,7 +22,7 @@ class _RegistrationState extends State<Registration> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.deepPurple,
+      backgroundColor: scaffoldColor,
       appBar: AppBar(
         title: const Text(
           'Registration',
@@ -28,10 +30,11 @@ class _RegistrationState extends State<Registration> {
             fontSize: 17.0,
           ),
         ),
-        backgroundColor: Colors.deepPurple,
+        backgroundColor: scaffoldColor,
         leading: const Icon(
-          Icons.abc,
-          color: Colors.deepPurple,
+          Icons.arrow_back_ios,
+          color: Colors.white,
+          size: 18,
         ),
         elevation: 0,
       ),
@@ -58,7 +61,7 @@ class _RegistrationState extends State<Registration> {
                         hintText: 'First Name',
                         border: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(8.0)),
-                        fillColor: Colors.grey,
+                        fillColor: Colors.grey.shade200,
                         filled: true,
                         contentPadding: const EdgeInsets.symmetric(
                           vertical: 2.0,
@@ -73,7 +76,7 @@ class _RegistrationState extends State<Registration> {
                           hintText: 'Last Name',
                           border: OutlineInputBorder(
                               borderRadius: BorderRadius.circular(8.0)),
-                          fillColor: Colors.grey,
+                          fillColor: Colors.grey.shade200,
                           filled: true,
                           contentPadding: const EdgeInsets.symmetric(
                             vertical: 2.0,
@@ -87,7 +90,7 @@ class _RegistrationState extends State<Registration> {
                         hintText: 'Email',
                         border: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(8.0)),
-                        fillColor: Colors.grey,
+                        fillColor: Colors.grey.shade200,
                         filled: true,
                         contentPadding: const EdgeInsets.symmetric(
                           vertical: 2.0,
@@ -103,7 +106,7 @@ class _RegistrationState extends State<Registration> {
                           suffixIcon: const Icon(Icons.remove_red_eye),
                           border: OutlineInputBorder(
                               borderRadius: BorderRadius.circular(8.0)),
-                          fillColor: Colors.grey,
+                          fillColor: Colors.grey.shade200,
                           filled: true,
                           contentPadding: const EdgeInsets.symmetric(
                             vertical: 2.0,
@@ -118,7 +121,7 @@ class _RegistrationState extends State<Registration> {
                         suffixIcon: const Icon(Icons.remove_red_eye),
                         border: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(8.0)),
-                        fillColor: Colors.grey,
+                        fillColor: Colors.grey.shade200,
                         filled: true,
                         contentPadding: const EdgeInsets.symmetric(
                           vertical: 2.0,
@@ -170,23 +173,20 @@ class _RegistrationState extends State<Registration> {
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        const Image(
-                          image: AssetImage('images/facebook.png'),
-                          height: 40.0,
-                          width: 40.0,
+                        SvgPicture.asset(
+                          'assets/icons/Facebook.svg',
+                          width: 30,
                         ),
                         Container(
                           margin: const EdgeInsets.symmetric(horizontal: 10.0),
-                          child: const Image(
-                            image: AssetImage('images/google.png'),
-                            height: 40.0,
-                            width: 40.0,
+                          child: SvgPicture.asset(
+                            'assets/icons/Google.svg',
+                            width: 30,
                           ),
                         ),
-                        const Image(
-                          image: AssetImage('images/twitter.png'),
-                          height: 40.0,
-                          width: 40.0,
+                        SvgPicture.asset(
+                          'assets/icons/Twitter.svg',
+                          width: 30,
                         ),
                       ],
                     ),

@@ -1,9 +1,8 @@
-import 'package:casino/screens/first.dart';
+import 'package:casino/constants/colors.dart';
 import 'package:casino/screens/home.dart';
-import 'package:casino/screens/payment_screen.dart';
-import 'package:casino/screens/third.dart';
 import 'package:flutter/material.dart';
 import 'package:casino/screens/registration_screen.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 class SignIn extends StatefulWidget {
   const SignIn({Key? key}) : super(key: key);
@@ -29,9 +28,9 @@ class _SignInState extends State<SignIn> {
         ),
         centerTitle: true,
         elevation: 0.0,
-        backgroundColor: Colors.indigo[900],
+        backgroundColor: scaffoldColor,
       ),
-      backgroundColor: Colors.indigo[900],
+      backgroundColor: scaffoldColor,
       body: SafeArea(
         child: SingleChildScrollView(
           physics: const BouncingScrollPhysics(),
@@ -56,7 +55,7 @@ class _SignInState extends State<SignIn> {
                         prefixIcon: const Icon(Icons.person),
                         hintText: 'Username or Email Address',
                         border: OutlineInputBorder(borderRadius: BorderRadius.circular(8.0)),
-                        fillColor: Colors.grey,
+                        fillColor: Colors.grey.shade200,
                         filled: true,
                         contentPadding: const EdgeInsets.symmetric(vertical: 2.0,),
                       ),
@@ -112,7 +111,7 @@ class _SignInState extends State<SignIn> {
                         textStyle: const TextStyle(
                           fontSize: 19.0,
                         ),
-                        primary: Colors.indigo[900],
+                        primary: blueShade,
                         shape: const StadiumBorder(),
                         fixedSize: const Size(300.0, 50.0)
                     )
@@ -128,20 +127,20 @@ class _SignInState extends State<SignIn> {
                       Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          const Image(image: AssetImage('images/facebook.png'),
-                            height: 40.0,
-                            width: 40.0,
+                          SvgPicture.asset(
+                            'assets/icons/Facebook.svg',
+                            width: 30,
                           ),
                           Container(
                             margin: const EdgeInsets.symmetric(horizontal: 10.0),
-                            child: const Image(image: AssetImage('images/google.png'),
-                              height: 40.0,
-                              width: 40.0,
+                            child: SvgPicture.asset(
+                              'assets/icons/Google.svg',
+                              width: 30,
                             ),
                           ),
-                          const Image(image: AssetImage('images/twitter.png'),
-                            height: 40.0,
-                            width: 40.0,
+                          SvgPicture.asset(
+                            'assets/icons/Twitter.svg',
+                            width: 30,
                           ),
                         ],
                       ),
