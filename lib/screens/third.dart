@@ -1,3 +1,4 @@
+import 'package:casino/constants/colors.dart';
 import 'package:casino/screens/payment_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -62,26 +63,41 @@ class _ThirdState extends State<Third> {
     var width =MediaQuery.of(context).size.width;
     var height=MediaQuery.of(context).size.height;
     return Scaffold(
-      backgroundColor: Colors.indigo[900],
       appBar: AppBar(
-        backgroundColor: Colors.indigo[900],
+        backgroundColor: scaffoldColor,
         // leading: IconButton(icon:const Icon(Icons.arrow_back_ios),onPressed: (){
         //   Navigator.pop(context);
         //
         // },),
         automaticallyImplyLeading: false,
         elevation: 0,
-        title: Text('Choose Number',style: TextStyle(color: Colors.white),),
+        title: const Text('Choose Number',style: TextStyle(color: Colors.white),),
       ),
       body: Container(
-        padding: EdgeInsets.only(top: 15),
+        padding: const EdgeInsets.only(top: 15),
         child: Column(
-            mainAxisAlignment: MainAxisAlignment.start,
-            // crossAxisAlignment: CrossAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Container(
-              margin: EdgeInsets.only(bottom: 10),
-                child: Text('Choose \n5 numbers',style: TextStyle(color: Colors.white),)),
+            Padding(
+              padding: EdgeInsets.only(left: width/18),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: const [
+                  Text('Choose',
+                    style: TextStyle(
+                      fontSize: 22,
+                      color: Colors.white,
+                    ),
+                  ),
+                  Text('5 numbers',
+                    style: TextStyle(
+                      fontSize: 22,
+                      color: Colors.white,
+                    ),
+                  ),
+                ],
+              ),
+            ),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
@@ -93,11 +109,8 @@ class _ThirdState extends State<Third> {
 
               ],
             ),
-             // Spacer(),
-            SizedBox(height: 15,),
+            Spacer(),
             bottomContainer(context),
-
-
           ],
         ),
       ),
@@ -167,8 +180,8 @@ class _ThirdState extends State<Third> {
 
         height: 40,
         decoration:  BoxDecoration(
-        color: selected1 ? Colors.indigo:Colors.transparent,
-          border:const  Border(
+        color: selected1 ? blueShade :Colors.transparent,
+          border: Border(
             bottom: BorderSide(style: BorderStyle.solid,color: Colors.grey),
             top: BorderSide(style: BorderStyle.solid,color: Colors.grey),
             left: BorderSide(style: BorderStyle.solid,color: Colors.grey),
@@ -179,7 +192,9 @@ class _ThirdState extends State<Third> {
         child:  Center(child:
         Text(assignedNumber,
           style: TextStyle(
-            color: selected1 ? Colors.white:Colors.black,
+            color: selected1 ? Colors.white:Colors.black54,
+            fontSize: 20,
+            fontWeight: FontWeight.w600,
           ),
 
         )),
@@ -248,7 +263,7 @@ class _ThirdState extends State<Third> {
 
          height: 40,
          decoration:  BoxDecoration(
-             color: selected2 ? Colors.indigo:Colors.transparent,
+             color: selected2 ? blueShade:Colors.transparent,
              border:const  Border(
                bottom: BorderSide(style: BorderStyle.solid,color: Colors.grey),
                top: BorderSide(style: BorderStyle.solid,color: Colors.grey),
@@ -260,8 +275,10 @@ class _ThirdState extends State<Third> {
          child:  Center(child:
          Text(assignedNumber,
            style: TextStyle(
-             color: selected2 ? Colors.white:Colors.black,
-           ),
+           color: selected1 ? Colors.white:Colors.black54,
+           fontSize: 20,
+           fontWeight: FontWeight.w600,
+         ),
 
          )),
 
@@ -327,7 +344,7 @@ class _ThirdState extends State<Third> {
 
          height: 40,
          decoration:  BoxDecoration(
-             color: selected3 ? Colors.indigo:Colors.transparent,
+             color: selected3 ? blueShade:Colors.transparent,
              border:const  Border(
                bottom: BorderSide(style: BorderStyle.solid,color: Colors.grey),
                top: BorderSide(style: BorderStyle.solid,color: Colors.grey),
@@ -339,7 +356,9 @@ class _ThirdState extends State<Third> {
          child:  Center(child:
          Text(assignedNumber,
            style: TextStyle(
-             color: selected3 ? Colors.white:Colors.black,
+             color: selected1 ? Colors.white:Colors.black54,
+             fontSize: 20,
+             fontWeight: FontWeight.w600,
            ),
 
          )),
@@ -406,7 +425,7 @@ class _ThirdState extends State<Third> {
 
          height: 40,
          decoration:  BoxDecoration(
-             color: selected4 ? Colors.indigo:Colors.transparent,
+             color: selected4 ? blueShade:Colors.transparent,
              border:const  Border(
                bottom: BorderSide(style: BorderStyle.solid,color: Colors.grey),
                top: BorderSide(style: BorderStyle.solid,color: Colors.grey),
@@ -418,7 +437,9 @@ class _ThirdState extends State<Third> {
          child:  Center(child:
          Text(assignedNumber,
            style: TextStyle(
-             color: selected4 ? Colors.white:Colors.black,
+             color: selected1 ? Colors.white:Colors.black54,
+             fontSize: 20,
+             fontWeight: FontWeight.w600,
            ),
 
          )),
@@ -485,7 +506,7 @@ class _ThirdState extends State<Third> {
 
          height: 40,
          decoration:  BoxDecoration(
-             color: selected5 ? Colors.indigo:Colors.transparent,
+             color: selected5 ? blueShade:Colors.transparent,
              border:const  Border(
                bottom: BorderSide(style: BorderStyle.solid,color: Colors.grey),
                top: BorderSide(style: BorderStyle.solid,color: Colors.grey),
@@ -497,7 +518,9 @@ class _ThirdState extends State<Third> {
          child:  Center(child:
          Text(assignedNumber,
            style: TextStyle(
-             color: selected5 ? Colors.white:Colors.black,
+             color: selected1 ? Colors.white:Colors.black54,
+             fontSize: 20,
+             fontWeight: FontWeight.w600,
            ),
 
          )),
@@ -564,7 +587,7 @@ class _ThirdState extends State<Third> {
 
          height: 40,
          decoration:  BoxDecoration(
-             color: selected6 ? Colors.indigo:Colors.transparent,
+             color: selected6 ? blueShade:Colors.transparent,
              border:const  Border(
                bottom: BorderSide(style: BorderStyle.solid,color: Colors.grey),
                top: BorderSide(style: BorderStyle.solid,color: Colors.grey),
@@ -576,7 +599,9 @@ class _ThirdState extends State<Third> {
          child:  Center(child:
          Text(assignedNumber,
            style: TextStyle(
-             color: selected6 ? Colors.white:Colors.black,
+             color: selected1 ? Colors.white:Colors.black54,
+             fontSize: 20,
+             fontWeight: FontWeight.w600,
            ),
 
          )),
@@ -643,7 +668,7 @@ class _ThirdState extends State<Third> {
 
          height: 40,
          decoration:  BoxDecoration(
-             color: selected7 ? Colors.indigo:Colors.transparent,
+             color: selected7 ? blueShade:Colors.transparent,
              border:const  Border(
                bottom: BorderSide(style: BorderStyle.solid,color: Colors.grey),
                top: BorderSide(style: BorderStyle.solid,color: Colors.grey),
@@ -655,7 +680,9 @@ class _ThirdState extends State<Third> {
          child:  Center(child:
          Text(assignedNumber,
            style: TextStyle(
-             color: selected7 ? Colors.white:Colors.black,
+             color: selected1 ? Colors.white:Colors.black54,
+             fontSize: 20,
+             fontWeight: FontWeight.w600,
            ),
 
          )),
@@ -722,7 +749,7 @@ class _ThirdState extends State<Third> {
 
          height: 40,
          decoration:  BoxDecoration(
-             color: selected8 ? Colors.indigo:Colors.transparent,
+             color: selected8 ? blueShade:Colors.transparent,
              border:const  Border(
                bottom: BorderSide(style: BorderStyle.solid,color: Colors.grey),
                top: BorderSide(style: BorderStyle.solid,color: Colors.grey),
@@ -734,7 +761,9 @@ class _ThirdState extends State<Third> {
          child:  Center(child:
          Text(assignedNumber,
            style: TextStyle(
-             color: selected8 ? Colors.white:Colors.black,
+             color: selected1 ? Colors.white:Colors.black54,
+             fontSize: 20,
+             fontWeight: FontWeight.w600,
            ),
 
          )),
@@ -801,7 +830,7 @@ class _ThirdState extends State<Third> {
 
          height: 40,
          decoration:  BoxDecoration(
-             color: selected9 ? Colors.indigo:Colors.transparent,
+             color: selected9 ? blueShade:Colors.transparent,
              border:const  Border(
                bottom: BorderSide(style: BorderStyle.solid,color: Colors.grey),
                top: BorderSide(style: BorderStyle.solid,color: Colors.grey),
@@ -813,7 +842,9 @@ class _ThirdState extends State<Third> {
          child:  Center(child:
          Text(assignedNumber,
            style: TextStyle(
-             color: selected9 ? Colors.white:Colors.black,
+             color: selected1 ? Colors.white:Colors.black54,
+             fontSize: 20,
+             fontWeight: FontWeight.w600,
            ),
 
          )),
@@ -880,7 +911,7 @@ class _ThirdState extends State<Third> {
 
          height: 40,
          decoration:  BoxDecoration(
-             color: selected10 ? Colors.indigo:Colors.transparent,
+             color: selected10 ? blueShade:Colors.transparent,
              border:const  Border(
                bottom: BorderSide(style: BorderStyle.solid,color: Colors.grey),
                top: BorderSide(style: BorderStyle.solid,color: Colors.grey),
@@ -892,7 +923,9 @@ class _ThirdState extends State<Third> {
          child:  Center(child:
          Text(assignedNumber,
            style: TextStyle(
-             color: selected10 ? Colors.white:Colors.black,
+             color: selected1 ? Colors.white:Colors.black54,
+             fontSize: 20,
+             fontWeight: FontWeight.w600,
            ),
 
          )),
@@ -959,7 +992,7 @@ class _ThirdState extends State<Third> {
 
          height: 40,
          decoration:  BoxDecoration(
-             color: selected11 ? Colors.indigo:Colors.transparent,
+             color: selected11 ? blueShade:Colors.transparent,
              border:const  Border(
                bottom: BorderSide(style: BorderStyle.solid,color: Colors.grey),
                top: BorderSide(style: BorderStyle.solid,color: Colors.grey),
@@ -971,7 +1004,9 @@ class _ThirdState extends State<Third> {
          child:  Center(child:
          Text(assignedNumber,
            style: TextStyle(
-             color: selected11 ? Colors.white:Colors.black,
+             color: selected1 ? Colors.white:Colors.black54,
+             fontSize: 20,
+             fontWeight: FontWeight.w600,
            ),
 
          )),
@@ -1038,7 +1073,7 @@ class _ThirdState extends State<Third> {
 
          height: 40,
          decoration:  BoxDecoration(
-             color: selected12 ? Colors.indigo:Colors.transparent,
+             color: selected12 ? blueShade:Colors.transparent,
              border:const  Border(
                bottom: BorderSide(style: BorderStyle.solid,color: Colors.grey),
                top: BorderSide(style: BorderStyle.solid,color: Colors.grey),
@@ -1050,7 +1085,9 @@ class _ThirdState extends State<Third> {
          child:  Center(child:
          Text(assignedNumber,
            style: TextStyle(
-             color: selected12 ? Colors.white:Colors.black,
+             color: selected1 ? Colors.white:Colors.black54,
+             fontSize: 20,
+             fontWeight: FontWeight.w600,
            ),
 
          )),
@@ -1117,7 +1154,7 @@ class _ThirdState extends State<Third> {
 
          height: 40,
          decoration:  BoxDecoration(
-             color: selected13 ? Colors.indigo:Colors.transparent,
+             color: selected13 ? blueShade:Colors.transparent,
              border:const  Border(
                bottom: BorderSide(style: BorderStyle.solid,color: Colors.grey),
                top: BorderSide(style: BorderStyle.solid,color: Colors.grey),
@@ -1129,7 +1166,9 @@ class _ThirdState extends State<Third> {
          child:  Center(child:
          Text(assignedNumber,
            style: TextStyle(
-             color: selected13 ? Colors.white:Colors.black,
+             color: selected1 ? Colors.white:Colors.black54,
+             fontSize: 20,
+             fontWeight: FontWeight.w600,
            ),
 
          )),
@@ -1196,7 +1235,7 @@ class _ThirdState extends State<Third> {
 
          height: 40,
          decoration:  BoxDecoration(
-             color: selected14 ? Colors.indigo:Colors.transparent,
+             color: selected14 ? blueShade:Colors.transparent,
              border:const  Border(
                bottom: BorderSide(style: BorderStyle.solid,color: Colors.grey),
                top: BorderSide(style: BorderStyle.solid,color: Colors.grey),
@@ -1208,7 +1247,9 @@ class _ThirdState extends State<Third> {
          child:  Center(child:
          Text(assignedNumber,
            style: TextStyle(
-             color: selected14 ? Colors.white:Colors.black,
+             color: selected1 ? Colors.white:Colors.black54,
+             fontSize: 20,
+             fontWeight: FontWeight.w600,
            ),
 
          )),
@@ -1275,7 +1316,7 @@ class _ThirdState extends State<Third> {
 
          height: 40,
          decoration:  BoxDecoration(
-             color: selected15 ? Colors.indigo:Colors.transparent,
+             color: selected15 ? blueShade:Colors.transparent,
              border:const  Border(
                bottom: BorderSide(style: BorderStyle.solid,color: Colors.grey),
                top: BorderSide(style: BorderStyle.solid,color: Colors.grey),
@@ -1287,7 +1328,9 @@ class _ThirdState extends State<Third> {
          child:  Center(child:
          Text(assignedNumber,
            style: TextStyle(
-             color: selected15 ? Colors.white:Colors.black,
+             color: selected1 ? Colors.white:Colors.black54,
+             fontSize: 20,
+             fontWeight: FontWeight.w600,
            ),
 
          )),
@@ -1354,7 +1397,7 @@ class _ThirdState extends State<Third> {
 
          height: 40,
          decoration:  BoxDecoration(
-             color: selected16 ? Colors.indigo:Colors.transparent,
+             color: selected16 ? blueShade:Colors.transparent,
              border:const  Border(
                bottom: BorderSide(style: BorderStyle.solid,color: Colors.grey),
                top: BorderSide(style: BorderStyle.solid,color: Colors.grey),
@@ -1366,7 +1409,9 @@ class _ThirdState extends State<Third> {
          child:  Center(child:
          Text(assignedNumber,
            style: TextStyle(
-             color: selected16 ? Colors.white:Colors.black,
+             color: selected1 ? Colors.white:Colors.black54,
+             fontSize: 20,
+             fontWeight: FontWeight.w600,
            ),
 
          )),
@@ -1433,7 +1478,7 @@ class _ThirdState extends State<Third> {
 
          height: 40,
          decoration:  BoxDecoration(
-             color: selected17 ? Colors.indigo:Colors.transparent,
+             color: selected17 ? blueShade:Colors.transparent,
              border:const  Border(
                bottom: BorderSide(style: BorderStyle.solid,color: Colors.grey),
                top: BorderSide(style: BorderStyle.solid,color: Colors.grey),
@@ -1445,7 +1490,9 @@ class _ThirdState extends State<Third> {
          child:  Center(child:
          Text(assignedNumber,
            style: TextStyle(
-             color: selected17 ? Colors.white:Colors.black,
+             color: selected1 ? Colors.white:Colors.black54,
+             fontSize: 20,
+             fontWeight: FontWeight.w600,
            ),
 
          )),
@@ -1512,7 +1559,7 @@ class _ThirdState extends State<Third> {
 
          height: 40,
          decoration:  BoxDecoration(
-             color: selected18 ? Colors.indigo:Colors.transparent,
+             color: selected18 ? blueShade:Colors.transparent,
              border:const  Border(
                bottom: BorderSide(style: BorderStyle.solid,color: Colors.grey),
                top: BorderSide(style: BorderStyle.solid,color: Colors.grey),
@@ -1524,7 +1571,9 @@ class _ThirdState extends State<Third> {
          child:  Center(child:
          Text(assignedNumber,
            style: TextStyle(
-             color: selected18 ? Colors.white:Colors.black,
+             color: selected1 ? Colors.white:Colors.black54,
+             fontSize: 20,
+             fontWeight: FontWeight.w600,
            ),
 
          )),
@@ -1591,7 +1640,7 @@ class _ThirdState extends State<Third> {
 
          height: 40,
          decoration:  BoxDecoration(
-             color: selected19 ? Colors.indigo:Colors.transparent,
+             color: selected19 ? blueShade:Colors.transparent,
              border:const  Border(
                bottom: BorderSide(style: BorderStyle.solid,color: Colors.grey),
                top: BorderSide(style: BorderStyle.solid,color: Colors.grey),
@@ -1603,7 +1652,9 @@ class _ThirdState extends State<Third> {
          child:  Center(child:
          Text(assignedNumber,
            style: TextStyle(
-             color: selected19 ? Colors.white:Colors.black,
+             color: selected1 ? Colors.white:Colors.black54,
+             fontSize: 20,
+             fontWeight: FontWeight.w600,
            ),
 
          )),
@@ -1670,7 +1721,7 @@ class _ThirdState extends State<Third> {
 
          height: 40,
          decoration:  BoxDecoration(
-             color: selected20 ? Colors.indigo:Colors.transparent,
+             color: selected20 ? blueShade:Colors.transparent,
              border:const  Border(
                bottom: BorderSide(style: BorderStyle.solid,color: Colors.grey),
                top: BorderSide(style: BorderStyle.solid,color: Colors.grey),
@@ -1682,7 +1733,9 @@ class _ThirdState extends State<Third> {
          child:  Center(child:
          Text(assignedNumber,
            style: TextStyle(
-             color: selected20 ? Colors.white:Colors.black,
+             color: selected1 ? Colors.white:Colors.black54,
+             fontSize: 20,
+             fontWeight: FontWeight.w600,
            ),
 
          )),
@@ -1749,7 +1802,7 @@ class _ThirdState extends State<Third> {
 
          height: 40,
          decoration:  BoxDecoration(
-             color: selected21 ? Colors.indigo:Colors.transparent,
+             color: selected21 ? blueShade:Colors.transparent,
              border:const  Border(
                bottom: BorderSide(style: BorderStyle.solid,color: Colors.grey),
                top: BorderSide(style: BorderStyle.solid,color: Colors.grey),
@@ -1761,7 +1814,9 @@ class _ThirdState extends State<Third> {
          child:  Center(child:
          Text(assignedNumber,
            style: TextStyle(
-             color: selected21 ? Colors.white:Colors.black,
+             color: selected1 ? Colors.white:Colors.black54,
+             fontSize: 20,
+             fontWeight: FontWeight.w600,
            ),
 
          )),
@@ -1828,7 +1883,7 @@ class _ThirdState extends State<Third> {
 
          height: 40,
          decoration:  BoxDecoration(
-             color: selected22 ? Colors.indigo:Colors.transparent,
+             color: selected22 ? blueShade:Colors.transparent,
              border:const  Border(
                bottom: BorderSide(style: BorderStyle.solid,color: Colors.grey),
                top: BorderSide(style: BorderStyle.solid,color: Colors.grey),
@@ -1840,7 +1895,9 @@ class _ThirdState extends State<Third> {
          child:  Center(child:
          Text(assignedNumber,
            style: TextStyle(
-             color: selected22 ? Colors.white:Colors.black,
+             color: selected1 ? Colors.white:Colors.black54,
+             fontSize: 20,
+             fontWeight: FontWeight.w600,
            ),
 
          )),
@@ -1907,7 +1964,7 @@ class _ThirdState extends State<Third> {
 
          height: 40,
          decoration:  BoxDecoration(
-             color: selected23 ? Colors.indigo:Colors.transparent,
+             color: selected23 ? blueShade:Colors.transparent,
              border:const  Border(
                bottom: BorderSide(style: BorderStyle.solid,color: Colors.grey),
                top: BorderSide(style: BorderStyle.solid,color: Colors.grey),
@@ -1919,7 +1976,9 @@ class _ThirdState extends State<Third> {
          child:  Center(child:
          Text(assignedNumber,
            style: TextStyle(
-             color: selected23 ? Colors.white:Colors.black,
+             color: selected1 ? Colors.white:Colors.black54,
+             fontSize: 20,
+             fontWeight: FontWeight.w600,
            ),
 
          )),
@@ -1986,7 +2045,7 @@ class _ThirdState extends State<Third> {
 
          height: 40,
          decoration:  BoxDecoration(
-             color: selected24 ? Colors.indigo:Colors.transparent,
+             color: selected24 ? blueShade:Colors.transparent,
              border:const  Border(
                bottom: BorderSide(style: BorderStyle.solid,color: Colors.grey),
                top: BorderSide(style: BorderStyle.solid,color: Colors.grey),
@@ -1998,7 +2057,9 @@ class _ThirdState extends State<Third> {
          child:  Center(child:
          Text(assignedNumber,
            style: TextStyle(
-             color: selected24 ? Colors.white:Colors.black,
+             color: selected1 ? Colors.white:Colors.black54,
+             fontSize: 20,
+             fontWeight: FontWeight.w600,
            ),
 
          )),
@@ -2065,7 +2126,7 @@ class _ThirdState extends State<Third> {
 
          height: 40,
          decoration:  BoxDecoration(
-             color: selected25 ? Colors.indigo:Colors.transparent,
+             color: selected25 ? blueShade:Colors.transparent,
              border:const  Border(
                bottom: BorderSide(style: BorderStyle.solid,color: Colors.grey),
                top: BorderSide(style: BorderStyle.solid,color: Colors.grey),
@@ -2077,7 +2138,9 @@ class _ThirdState extends State<Third> {
          child:  Center(child:
          Text(assignedNumber,
            style: TextStyle(
-             color: selected25 ? Colors.white:Colors.black,
+             color: selected1 ? Colors.white:Colors.black54,
+             fontSize: 20,
+             fontWeight: FontWeight.w600,
            ),
 
          )),
@@ -2144,7 +2207,7 @@ class _ThirdState extends State<Third> {
 
          height: 40,
          decoration:  BoxDecoration(
-             color: selected26 ? Colors.indigo:Colors.transparent,
+             color: selected26 ? blueShade:Colors.transparent,
              border:const  Border(
                bottom: BorderSide(style: BorderStyle.solid,color: Colors.grey),
                top: BorderSide(style: BorderStyle.solid,color: Colors.grey),
@@ -2156,7 +2219,9 @@ class _ThirdState extends State<Third> {
          child:  Center(child:
          Text(assignedNumber,
            style: TextStyle(
-             color: selected26 ? Colors.white:Colors.black,
+             color: selected1 ? Colors.white:Colors.black54,
+             fontSize: 20,
+             fontWeight: FontWeight.w600,
            ),
 
          )),
@@ -2223,7 +2288,7 @@ class _ThirdState extends State<Third> {
 
          height: 40,
          decoration:  BoxDecoration(
-             color: selected27 ? Colors.indigo:Colors.transparent,
+             color: selected27 ? blueShade:Colors.transparent,
              border:const  Border(
                bottom: BorderSide(style: BorderStyle.solid,color: Colors.grey),
                top: BorderSide(style: BorderStyle.solid,color: Colors.grey),
@@ -2235,7 +2300,9 @@ class _ThirdState extends State<Third> {
          child:  Center(child:
          Text(assignedNumber,
            style: TextStyle(
-             color: selected27 ? Colors.white:Colors.black,
+             color: selected1 ? Colors.white:Colors.black54,
+             fontSize: 20,
+             fontWeight: FontWeight.w600,
            ),
 
          )),
@@ -2302,7 +2369,7 @@ class _ThirdState extends State<Third> {
 
          height: 40,
          decoration:  BoxDecoration(
-             color: selected28 ? Colors.indigo:Colors.transparent,
+             color: selected28 ? blueShade:Colors.transparent,
              border:const  Border(
                bottom: BorderSide(style: BorderStyle.solid,color: Colors.grey),
                top: BorderSide(style: BorderStyle.solid,color: Colors.grey),
@@ -2314,7 +2381,9 @@ class _ThirdState extends State<Third> {
          child:  Center(child:
          Text(assignedNumber,
            style: TextStyle(
-             color: selected28 ? Colors.white:Colors.black,
+             color: selected1 ? Colors.white:Colors.black54,
+             fontSize: 20,
+             fontWeight: FontWeight.w600,
            ),
 
          )),
@@ -2381,7 +2450,7 @@ class _ThirdState extends State<Third> {
 
          height: 40,
          decoration:  BoxDecoration(
-             color: selected29 ? Colors.indigo:Colors.transparent,
+             color: selected29 ? blueShade:Colors.transparent,
              border:const  Border(
                bottom: BorderSide(style: BorderStyle.solid,color: Colors.grey),
                top: BorderSide(style: BorderStyle.solid,color: Colors.grey),
@@ -2393,7 +2462,9 @@ class _ThirdState extends State<Third> {
          child:  Center(child:
          Text(assignedNumber,
            style: TextStyle(
-             color: selected29 ? Colors.white:Colors.black,
+             color: selected1 ? Colors.white:Colors.black54,
+             fontSize: 20,
+             fontWeight: FontWeight.w600,
            ),
 
          )),
@@ -2460,7 +2531,7 @@ class _ThirdState extends State<Third> {
 
          height: 40,
          decoration:  BoxDecoration(
-             color: selected30 ? Colors.indigo:Colors.transparent,
+             color: selected30 ? blueShade:Colors.transparent,
              border:const  Border(
                bottom: BorderSide(style: BorderStyle.solid,color: Colors.grey),
                top: BorderSide(style: BorderStyle.solid,color: Colors.grey),
@@ -2472,7 +2543,9 @@ class _ThirdState extends State<Third> {
          child:  Center(child:
          Text(assignedNumber,
            style: TextStyle(
-             color: selected30 ? Colors.white:Colors.black,
+             color: selected1 ? Colors.white:Colors.black54,
+             fontSize: 20,
+             fontWeight: FontWeight.w600,
            ),
 
          )),
@@ -2488,9 +2561,8 @@ class _ThirdState extends State<Third> {
     var width =MediaQuery.of(context).size.width;
     var height=MediaQuery.of(context).size.height;
     return Container(
-      height: height*0.6375,
       width: width,
-      decoration: BoxDecoration(
+      decoration: const BoxDecoration(
           color: Colors.white,
           borderRadius: BorderRadius.vertical(top: Radius.circular(25),bottom: Radius.zero)
       ),
@@ -2516,16 +2588,20 @@ class _ThirdState extends State<Third> {
             child: Container(
               alignment: Alignment.center,
               height: 50,
-              width: 200,
+              width: width/1.8,
               decoration: BoxDecoration(
-                color: Colors.indigo,
+                color: blueShade,
                 borderRadius: BorderRadius.circular(12),
               ),
-              child: Center(
-                child: Text('Make a payment',style: TextStyle(color: Colors.white),),
+              child:const Center(
+                child: Text('Make a payment',style: TextStyle(
+                    color: Colors.white,
+                  fontSize: 18,
+                ),),
               ),
             ),
           ),
+          SizedBox(height: 10.0,),
         ],
       ),
 
@@ -2536,7 +2612,7 @@ class _ThirdState extends State<Third> {
     var width =MediaQuery.of(context).size.width;
     var height=MediaQuery.of(context).size.height;
     return Container(
-      height: height*0.5,
+      height: height/2.4,
       width: width*0.97,
       decoration: BoxDecoration(
         color: Colors.white,
@@ -2591,15 +2667,10 @@ class _ThirdState extends State<Third> {
    Widget fieldNumber1(String first){
      return Container(
        padding: EdgeInsets.only(left: 10,right: 10),
-       height: 80,
-       width: 70,
-
-
-
+       height: 85,
+       width: 80,
        child: Container(
          margin: EdgeInsets.only(top: 20,right: 5,left: 5),
-
-
          height: 70,
          decoration:  BoxDecoration(
              color: Colors.white,
@@ -2611,7 +2682,7 @@ class _ThirdState extends State<Third> {
              ),
              borderRadius: BorderRadius.circular(7)
          ),
-         child: Center(child: Text(firstNo,style: TextStyle(color: Colors.orange,fontWeight: FontWeight.bold),)),
+         child: Center(child: Text(firstNo,style: TextStyle(color: orangeShade,fontWeight: FontWeight.bold, fontSize: 22),)),
 
 
 
@@ -2621,8 +2692,8 @@ class _ThirdState extends State<Third> {
    Widget fieldNumber2(String second){
      return Container(
        padding: EdgeInsets.only(left: 10,right: 10),
-       height: 80,
-       width: 70,
+       height: 85,
+       width: 80,
 
 
 
@@ -2641,7 +2712,7 @@ class _ThirdState extends State<Third> {
              ),
              borderRadius: BorderRadius.circular(7)
          ),
-         child: Center(child: Text(secondNo,style: TextStyle(color: Colors.orange,fontWeight: FontWeight.bold),)),
+         child: Center(child: Text(secondNo,style: TextStyle(color: orangeShade,fontWeight: FontWeight.bold, fontSize: 22),)),
 
 
 
@@ -2651,8 +2722,8 @@ class _ThirdState extends State<Third> {
    Widget fieldNumber3(String third){
      return Container(
        padding: EdgeInsets.only(left: 10,right: 10),
-       height: 80,
-       width: 70,
+       height: 85,
+       width: 80,
 
 
 
@@ -2671,7 +2742,7 @@ class _ThirdState extends State<Third> {
              ),
              borderRadius: BorderRadius.circular(7)
          ),
-         child: Center(child: Text(thirdNo,style: TextStyle(color: Colors.orange,fontWeight: FontWeight.bold),)),
+         child: Center(child: Text(thirdNo,style: TextStyle(color: orangeShade,fontWeight: FontWeight.bold, fontSize: 22),)),
 
 
 
@@ -2681,8 +2752,8 @@ class _ThirdState extends State<Third> {
    Widget fieldNumber4(String fourth){
      return Container(
        padding: EdgeInsets.only(left: 10,right: 10),
-       height: 80,
-       width: 70,
+       height: 85,
+       width: 80,
 
 
 
@@ -2701,7 +2772,7 @@ class _ThirdState extends State<Third> {
              ),
              borderRadius: BorderRadius.circular(7)
          ),
-         child: Center(child: Text(fourthNo,style: TextStyle(color: Colors.orange,fontWeight: FontWeight.bold),)),
+         child: Center(child: Text(fourthNo,style: TextStyle(color: orangeShade,fontWeight: FontWeight.bold, fontSize: 22),)),
 
 
 
@@ -2711,8 +2782,8 @@ class _ThirdState extends State<Third> {
    Widget fieldNumber5(String fifth){
      return Container(
        padding: EdgeInsets.only(left: 10,right: 10),
-       height: 80,
-       width: 70,
+       height: 85,
+       width: 80,
 
 
 
@@ -2731,7 +2802,7 @@ class _ThirdState extends State<Third> {
              ),
              borderRadius: BorderRadius.circular(7)
          ),
-         child: Center(child: Text(fifthNo,style: TextStyle(color: Colors.orange,fontWeight: FontWeight.bold),)),
+         child: Center(child: Text(fifthNo,style: TextStyle(color: orangeShade,fontWeight: FontWeight.bold, fontSize: 22),)),
 
 
 
@@ -2739,5 +2810,4 @@ class _ThirdState extends State<Third> {
      );
    }
 }
-
 
