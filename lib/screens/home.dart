@@ -107,7 +107,7 @@ class _HomeState extends State<Home> {
         ],
       ),
       drawer: Drawer(
-        backgroundColor: Colors.indigo[900],
+        backgroundColor: scaffoldColor,
         child: ListView(
           children:  [
             ListTile(trailing:IconButton(onPressed: (){Navigator.pop(context);},icon: Icon(Icons.close,color: Colors.white,),),),

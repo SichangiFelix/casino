@@ -33,7 +33,9 @@ class Activity extends StatelessWidget {
                 children: [
                   ListTile(
                     tileColor: Colors.transparent,
-                    leading:IconButton(icon: const Icon(Icons.menu,color: Colors.white,),onPressed: (){},) ,
+                    leading:IconButton(icon: const Icon(Icons.menu,color: Colors.white,),onPressed: (){
+                      Scaffold.of(context).openDrawer();
+                    },) ,
                     trailing: IconButton(icon: const Icon(Icons.circle_notifications_outlined,color: Colors.white,size: 30,),onPressed: (){},),
                   ),
 

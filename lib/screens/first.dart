@@ -1,6 +1,5 @@
+import 'package:casino/constants/colors.dart';
 import 'package:casino/screens/second.dart';
-import 'package:casino/screens/third.dart';
-import 'package:casino/widgets/button.dart';
 import 'package:casino/widgets/card_view.dart';
 import 'package:casino/widgets/settings_item.dart';
 import 'package:flutter/cupertino.dart';
@@ -14,10 +13,10 @@ class First extends StatelessWidget {
     var width =MediaQuery.of(context).size.width;
     var height=MediaQuery.of(context).size.height;
     return Scaffold(
-       backgroundColor: Colors.indigo[900],
+       backgroundColor: scaffoldColor,
 
       appBar: AppBar(
-        backgroundColor: Colors.indigo[900],
+        backgroundColor: scaffoldColor,
         leading: IconButton(icon: const Icon(Icons.arrow_back_ios),onPressed: (){
           Navigator.pop(context);
 
@@ -34,12 +33,14 @@ class First extends StatelessWidget {
           children: [
             Container(
               padding: const EdgeInsets.only(top: 20,left: 10,bottom: 10),
-              child:const Text('Your Cards',style: TextStyle(color: Colors.white),),
+              child:const Text('Your Cards',style: TextStyle(color: Colors.white,
+                fontSize: 22
+              ),),
             ),
             Container(
               margin:const EdgeInsets.only(bottom: 15),
               padding:const EdgeInsets.only(top: 20,left: 10,bottom: 10),
-              child:const Text('2 Physical Card, 1 Virtual Wallet',style: TextStyle(color: Colors.white),),
+              child:const Text('2 Physical Card, 1 Virtual Wallet',style: TextStyle(color: Colors.white, fontSize: 16),),
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.start,
@@ -85,8 +86,8 @@ class First extends StatelessWidget {
                       color: Colors.white,
                       borderRadius: BorderRadius.circular(12),
                     ),
-                    child: Center(
-                      child: Text('Proceed',style: TextStyle(color: Colors.indigo),),
+                    child: const Center(
+                      child: Text('Proceed',style: TextStyle(color: Colors.indigo, fontSize: 20.0, fontWeight: FontWeight.w600),),
                     ),
                   ),
                 )

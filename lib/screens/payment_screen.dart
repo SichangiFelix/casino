@@ -1,3 +1,4 @@
+import 'package:casino/constants/colors.dart';
 import 'package:casino/screens/first.dart';
 import 'package:casino/screens/second.dart';
 import 'package:flutter/material.dart';
@@ -22,13 +23,13 @@ class _PaymentState extends State<Payment> {
   Widget build(BuildContext context) {
 
     return Scaffold(
-      backgroundColor: Colors.indigo[900],
+      backgroundColor: scaffoldColor,
       appBar: AppBar(
         leading: IconButton(icon:const Icon(Icons.arrow_back_ios),onPressed: (){
           Navigator.pop(context);
 
         },),
-        backgroundColor: Colors.indigo[900],
+        backgroundColor: scaffoldColor,
         elevation: 0.0,
         title: const Text('Payment'),
         titleTextStyle: const TextStyle(
