@@ -1,7 +1,7 @@
 import 'package:casino/constants/colors.dart';
-import 'package:casino/screens/first.dart';
+import 'package:casino/screens/payment_method_screen.dart';
 import 'package:casino/screens/home.dart';
-import 'package:casino/screens/third.dart';
+import 'package:casino/screens/choose_number_screen.dart';
 import 'package:casino/widgets/ticket.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -10,8 +10,8 @@ import 'package:flutter_svg/svg.dart';
 
 import '../widgets/button.dart';
 
-class Second extends StatelessWidget {
-  const Second({Key? key}) : super(key: key);
+class ConfirmationScreen extends StatelessWidget {
+  const ConfirmationScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -45,7 +45,9 @@ class Second extends StatelessWidget {
               child: const Center(
                   child: Text(
                 '2.00 PM',
-                style: TextStyle(color: Colors.white),
+                style: TextStyle(color: Colors.white,
+                  fontSize: 22,
+                ),
               )),
             ),
             Container(
@@ -63,7 +65,7 @@ class Second extends StatelessWidget {
                 children: [
                   SvgPicture.asset(
                     'assets/icons/like.svg',
-                    width: 30 ,
+                    width: 100,
                   ),
                   Container(
                       margin: const EdgeInsets.only(top: 10, bottom: 10),
@@ -74,13 +76,12 @@ class Second extends StatelessWidget {
                             color: Colors.black,
                             fontSize: 30),
                       )),
-                  Container(
-                      child: Text(
+                  const Text(
                     'You have successfully \nPurchased your tickets',
                     style: TextStyle(color: Colors.grey),
-                  )),
-                  const Ticket(),
-                  const Ticket(),
+                  ),
+                  Ticket(ticketId: '32FGK2001F9#', date: '21 OCT 2021', validDraws: 1,),
+                  Ticket(ticketId: '32FGK33001G3#', date: '04 NOV 2021', validDraws: 1,),
                 ],
               ),
             ),
