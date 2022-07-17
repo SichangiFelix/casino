@@ -17,7 +17,7 @@ class Privacy extends StatelessWidget {
         ),onPressed: (){
           Navigator.pop(context);
       },),
-        title: Text('Privacy & Policy',style: TextStyle(color: Colors.white,
+        title: const Text('Privacy & Policy',style: TextStyle(color: Colors.white,
           fontSize: 15.0,
         ),),
         elevation: 0,
