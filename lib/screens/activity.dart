@@ -97,7 +97,7 @@ class Activity extends StatelessWidget {
                       ],
                     ),
                   ),
-                  const WinningTickets()
+                  WinningTickets(ticketId1: '325435354c#', ticketId2: '322dw5354c#', ticketId3: '343d5354c#',)
                 ],
               ),
             ),

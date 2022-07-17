@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 
 class CardView extends StatelessWidget {
   const CardView({Key? key}) : super(key: key);
@@ -14,24 +15,13 @@ class CardView extends StatelessWidget {
       child: ListView(
         scrollDirection: Axis.horizontal,
         children: [
-          Container(
-            margin: EdgeInsets.only(left: 10),
-            height: 100,
-            width: width *0.65,
-            decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(10),
-                color: Colors.pinkAccent
-            ),
+          SvgPicture.asset(
+            'assets/images/card1.svg',
+            width: width * 0.60,
           ),
-
-          Container(
-            margin: EdgeInsets.only(left: 10),
-            height: 80,
-            width: width *0.60,
-            decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(10),
-                color: Colors.pinkAccent
-            ),
+          SvgPicture.asset(
+            'assets/images/card2.svg',
+            width: width * 0.60,
           ),
         ],
       ),

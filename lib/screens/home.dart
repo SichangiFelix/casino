@@ -78,15 +78,15 @@ class _HomeState extends State<Home> {
           BottomNavigationBarItem(
             // label: 'Live feed',
             icon: SvgPicture.asset(
-              'assets/icons/special_rectangle.svg',
-              width: 24,
+              'assets/icons/nav_rect.svg',
+              width: 28,
             ),
           ),
           BottomNavigationBarItem(
             // label: 'Upload',
             icon: SvgPicture.asset(
               'assets/icons/message_icon.svg',
-              width: 24,
+              width: 26,
             ),
           ),
           BottomNavigationBarItem(

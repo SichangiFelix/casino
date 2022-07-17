@@ -1,7 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 
 class WinningTickets extends StatelessWidget {
-  const WinningTickets({Key? key}) : super(key: key);
+  String ticketId1;
+  String ticketId2;
+  String ticketId3;
+
+  WinningTickets({Key? key, required this.ticketId1, required this.ticketId2, required this.ticketId3,}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -14,52 +19,33 @@ class WinningTickets extends StatelessWidget {
       child: ListView(
         scrollDirection: Axis.horizontal,
         children: [
-          Container(
-            margin:const EdgeInsets.only(right: 10),
-            height: 25,
-            width: 120,
-            decoration: const BoxDecoration(
-              border: Border(
-                top: BorderSide(style: BorderStyle.solid,color: Colors.amber,),
-                bottom: BorderSide(style: BorderStyle.solid,color: Colors.amber,),
-                left: BorderSide(style: BorderStyle.solid,color: Colors.amber,),
-                right: BorderSide(style: BorderStyle.solid,color: Colors.amber,),
+          Stack(
+            children: [
+              SvgPicture.asset(
+                'assets/icons/ticket_container.svg',
+                width: 22,
               ),
-
-            ),
-            child: const Center(child: Text('Ticket ID:THPLYTREDCGY',style: TextStyle(fontWeight: FontWeight.bold,fontSize: 9),)),
+              Text('Ticket ID:$ticketId1',style: TextStyle(fontWeight: FontWeight.bold,fontSize: 9),)
+            ],
           ),
-          Container(
-            margin: EdgeInsets.only(right: 10),
-            height: 25,
-            width: 120,
-            decoration: const BoxDecoration(
-              border: Border(
-                top: BorderSide(style: BorderStyle.solid,color: Colors.amber,),
-                bottom: BorderSide(style: BorderStyle.solid,color: Colors.amber,),
-                left: BorderSide(style: BorderStyle.solid,color: Colors.amber,),
-                right: BorderSide(style: BorderStyle.solid,color: Colors.amber,),
+          Stack(
+            children: [
+              SvgPicture.asset(
+                'assets/icons/ticket_container.svg',
+                width: 26,
               ),
-
-            ),
-            child:const Center(child: Text('Ticket ID:THPLYTREDCGY',style: TextStyle(fontWeight: FontWeight.bold,fontSize: 9),)),
+              Text('Ticket ID:$ticketId2',style: TextStyle(fontWeight: FontWeight.bold,fontSize: 9),)
+            ],
           ),
-          Container(
-            margin:const EdgeInsets.only(right: 10),
-            height: 25,
-            width: 120,
-            decoration: const BoxDecoration(
-              border: Border(
-                top: BorderSide(style: BorderStyle.solid,color: Colors.amber,),
-                bottom: BorderSide(style: BorderStyle.solid,color: Colors.amber,),
-                left: BorderSide(style: BorderStyle.solid,color: Colors.amber,),
-                right: BorderSide(style: BorderStyle.solid,color: Colors.amber,),
+          Stack(
+            children: [
+              SvgPicture.asset(
+                'assets/icons/ticket_container.svg',
+                width: 26,
               ),
-
-            ),
-            child:const Center(child: Text('Ticket ID:THPLYTREDCGY',style: TextStyle(fontWeight: FontWeight.bold,fontSize: 9),)),
-          )
-
+              Text('Ticket ID:$ticketId3',style: TextStyle(fontWeight: FontWeight.bold,fontSize: 9),)
+            ],
+          ),
         ],
       ),
     );
