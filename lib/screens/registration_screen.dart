@@ -1,8 +1,8 @@
 import 'package:casino/constants/colors.dart';
-import 'package:casino/screens/first.dart';
+import 'package:casino/screens/payment_method_screen.dart';
 import 'package:casino/screens/home.dart';
 import 'package:casino/screens/sign_in.dart';
-import 'package:casino/screens/third.dart';
+import 'package:casino/screens/choose_number_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 

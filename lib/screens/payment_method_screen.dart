@@ -1,12 +1,12 @@
 import 'package:casino/constants/colors.dart';
-import 'package:casino/screens/second.dart';
+import 'package:casino/screens/confirmation_screen.dart';
 import 'package:casino/widgets/card_view.dart';
 import 'package:casino/widgets/settings_item.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class First extends StatelessWidget {
-  const First({Key? key}) : super(key: key);
+class PaymentMethodScreen extends StatelessWidget {
+  const PaymentMethodScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -77,7 +77,7 @@ class First extends StatelessWidget {
             Align(
               alignment: Alignment.center,
                 child: InkWell(
-                  onTap:()=> Navigator.push(context, MaterialPageRoute(builder: (context)=>Second())),
+                  onTap:()=> Navigator.push(context, MaterialPageRoute(builder: (context)=>ConfirmationScreen())),
                   child: Container(
                     alignment: Alignment.center,
                     height: 50,

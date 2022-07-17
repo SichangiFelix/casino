@@ -4,16 +4,16 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 
-class Third extends StatefulWidget {
+class ChooseNumberScreen extends StatefulWidget {
   // const Third({Key? key}) : super(key: key);
 
 
 
   @override
-  State<Third> createState() => _ThirdState();
+  State<ChooseNumberScreen> createState() => _ChooseNumberScreenState();
 }
 
-class _ThirdState extends State<Third> {
+class _ChooseNumberScreenState extends State<ChooseNumberScreen> {
 
    bool selected1=false;
    bool selected2=false;
@@ -2584,7 +2584,7 @@ class _ThirdState extends State<Third> {
           ),
           fieldSelection(context),
           InkWell(
-            onTap:()=> Navigator.push(context, MaterialPageRoute(builder: (context)=>Payment(selectedNumbers: selectedNumbers.toString(),))),
+            onTap:()=> Navigator.push(context, MaterialPageRoute(builder: (context)=>PaymentScreen(selectedNumbers: selectedNumbers.toString(),))),
             child: Container(
               alignment: Alignment.center,
               height: 50,

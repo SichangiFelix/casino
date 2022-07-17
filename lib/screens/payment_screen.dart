@@ -1,19 +1,19 @@
 import 'package:casino/constants/colors.dart';
-import 'package:casino/screens/first.dart';
-import 'package:casino/screens/second.dart';
+import 'package:casino/screens/payment_method_screen.dart';
+import 'package:casino/screens/confirmation_screen.dart';
 import 'package:flutter/material.dart';
 
-class Payment extends StatefulWidget {
+class PaymentScreen extends StatefulWidget {
 final String  selectedNumbers;
-  Payment({ required this.selectedNumbers});
+  PaymentScreen({ required this.selectedNumbers});
   static const String id = 'Payment';
 
 
   @override
-  State<Payment> createState() => _PaymentState();
+  State<PaymentScreen> createState() => _PaymentScreenState();
 }
 
-class _PaymentState extends State<Payment> {
+class _PaymentScreenState extends State<PaymentScreen> {
 
 
   int time = 0200, possibleWin = 275000;//The time displayed on the top of the page
@@ -127,7 +127,7 @@ class _PaymentState extends State<Payment> {
             ),
             ElevatedButton(
               onPressed: () {
-                Navigator.push(context, MaterialPageRoute(builder: (context)=>First()));
+                Navigator.push(context, MaterialPageRoute(builder: (context)=>PaymentMethodScreen()));
 
               },
               child: const Text('Pay Now',

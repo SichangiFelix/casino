@@ -1,9 +1,9 @@
 import 'package:casino/constants/colors.dart';
-import 'package:casino/screens/first.dart';
-import 'package:casino/screens/second.dart';
+import 'package:casino/screens/payment_method_screen.dart';
+import 'package:casino/screens/confirmation_screen.dart';
 import 'package:casino/screens/sign_in.dart';
 import 'package:casino/screens/splash_screen.dart';
-import 'package:casino/screens/third.dart';
+import 'package:casino/screens/choose_number_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() {

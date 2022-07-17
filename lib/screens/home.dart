@@ -2,7 +2,7 @@ import 'package:casino/constants/colors.dart';
 import 'package:casino/screens/activity.dart';
 import 'package:casino/screens/privacy_&_policy.dart';
 import 'package:casino/screens/sign_in.dart';
-import 'package:casino/screens/third.dart';
+import 'package:casino/screens/choose_number_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -49,7 +49,7 @@ class _HomeState extends State<Home> {
       body: PageView(
         children: <Widget>[
           Activity(),
-          Third(),
+          ChooseNumberScreen(),
           Container(),
           Container(),
           Container(),
