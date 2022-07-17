@@ -2,6 +2,7 @@ import 'package:casino/constants/colors.dart';
 import 'package:casino/screens/first.dart';
 import 'package:casino/screens/second.dart';
 import 'package:casino/screens/sign_in.dart';
+import 'package:casino/screens/splash_screen.dart';
 import 'package:casino/screens/third.dart';
 import 'package:flutter/material.dart';
 
@@ -23,7 +24,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.indigo,
         scaffoldBackgroundColor: scaffoldColor,
       ),
-      home: const SignIn(),
+      home: const SplashScreen(),
     );
   }
 }
