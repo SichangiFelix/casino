@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 
 class LatestDraw extends StatelessWidget {
   const LatestDraw({Key? key}) : super(key: key);
@@ -17,7 +18,7 @@ class LatestDraw extends StatelessWidget {
             margin: EdgeInsets.only(left: 10),
             padding: EdgeInsets.all(8),
             height: 100,
-            width: width *0.65,
+            width: width *0.7,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(20),
               border:const Border(
@@ -34,8 +35,9 @@ class LatestDraw extends StatelessWidget {
                   children: [
                     Container(
                       height: 60,
-                      width: 50,
-                      color: Colors.indigo,
+                      width: 60,
+                      color: Colors.transparent,
+                      child: SvgPicture.asset('assets/images/group1.svg'),
                     ),
                     SizedBox(width: 3,),
                     Column(
@@ -57,18 +59,19 @@ class LatestDraw extends StatelessWidget {
                       children:  [
                         Text('Winning Ticket',style: TextStyle(fontSize: 16,color: Colors.grey),),
                         Container(
-                          height: 25,
-                          width: 120,
-                          decoration: const BoxDecoration(
-                            border: Border(
-                                top: BorderSide(style: BorderStyle.solid,color: Colors.amber,),
-                              bottom: BorderSide(style: BorderStyle.solid,color: Colors.amber,),
-                              left: BorderSide(style: BorderStyle.solid,color: Colors.amber,),
-                              right: BorderSide(style: BorderStyle.solid,color: Colors.amber,),
-                            ),
+                          height: 30,
+                          width: 125,
+                          child: Stack(
+                            children: [
+                              SvgPicture.asset(
+                                'assets/icons/ticket_container.svg',
+                                fit: BoxFit.cover,
+                                width: 125,
 
+                              ),
+                              Center(child: Text('Ticket ID:THPLYTREDCGY',style: TextStyle(fontWeight: FontWeight.bold,fontSize: 9),)),
+                            ],
                           ),
-                          child: Center(child: Text('Ticket ID:THPLYTREDCGY',style: TextStyle(fontWeight: FontWeight.bold,fontSize: 10),)),
                         )
                         ],
                     ),
@@ -90,7 +93,7 @@ class LatestDraw extends StatelessWidget {
             margin: EdgeInsets.only(left: 10),
             padding: EdgeInsets.all(8),
             height: 100,
-            width: width *0.65,
+            width: width *0.7,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(20),
               border:const Border(
@@ -107,8 +110,9 @@ class LatestDraw extends StatelessWidget {
                   children: [
                     Container(
                       height: 60,
-                      width: 50,
-                      color: Colors.indigo,
+                      width: 60,
+                      color: Colors.transparent,
+                      child: SvgPicture.asset('assets/images/group3.svg',),
                     ),
                     SizedBox(width: 3,),
                     Column(
@@ -131,18 +135,17 @@ class LatestDraw extends StatelessWidget {
                         Text('Winning Ticket',style: TextStyle(fontSize: 16,color: Colors.grey),),
                         Container(
                           height: 25,
-                          width: 120,
-                          decoration: const BoxDecoration(
-                            border: Border(
-                              top: BorderSide(style: BorderStyle.solid,color: Colors.amber,),
-                              bottom: BorderSide(style: BorderStyle.solid,color: Colors.amber,),
-                              left: BorderSide(style: BorderStyle.solid,color: Colors.amber,),
-                              right: BorderSide(style: BorderStyle.solid,color: Colors.amber,),
-                            ),
-
-                          ),
-                          child: Center(child: Text('Ticket ID:THPLYTREDCGY',style: TextStyle(fontWeight: FontWeight.bold,fontSize: 10),)),
-                        )
+                          width: 125,
+                          child:Stack(
+                            children: [
+                              SvgPicture.asset(
+                                'assets/icons/ticket_container.svg',
+                                width: 125,
+                                fit: BoxFit.cover,
+                              ),
+                              Center(child: Text('Ticket ID:THPLYTREDCGY',style: TextStyle(fontWeight: FontWeight.bold,fontSize: 9),)),
+                            ],
+                          ), )
                       ],
                     ),
                     Column(

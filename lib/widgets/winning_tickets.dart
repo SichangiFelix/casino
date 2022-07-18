@@ -19,32 +19,50 @@ class WinningTickets extends StatelessWidget {
       child: ListView(
         scrollDirection: Axis.horizontal,
         children: [
-          Stack(
-            children: [
-              SvgPicture.asset(
-                'assets/icons/ticket_container.svg',
-                width: 22,
-              ),
-              Text('Ticket ID:$ticketId1',style: TextStyle(fontWeight: FontWeight.bold,fontSize: 9),)
-            ],
+          Container(
+            height: 25,
+            width: 120,
+            child: Stack(
+              children: [
+                SvgPicture.asset(
+                  'assets/icons/ticket_container.svg',
+                  fit: BoxFit.cover,
+                  width: 120,
+
+                ),
+                Center(child: Text('Ticket ID:$ticketId1',style: TextStyle(fontWeight: FontWeight.bold,fontSize: 9),))
+              ],
+            ),
           ),
-          Stack(
-            children: [
-              SvgPicture.asset(
-                'assets/icons/ticket_container.svg',
-                width: 26,
-              ),
-              Text('Ticket ID:$ticketId2',style: TextStyle(fontWeight: FontWeight.bold,fontSize: 9),)
-            ],
+          Container(
+            height: 25,
+            width: 120,
+            child: Stack(
+              children: [
+                SvgPicture.asset(
+                  'assets/icons/ticket_container.svg',
+                  fit: BoxFit.cover,
+                  width: 120,
+
+
+                ),
+                Center(child: Text('Ticket ID:$ticketId2',style: TextStyle(fontWeight: FontWeight.bold,fontSize: 9),))
+              ],
+            ),
           ),
-          Stack(
-            children: [
-              SvgPicture.asset(
-                'assets/icons/ticket_container.svg',
-                width: 26,
-              ),
-              Text('Ticket ID:$ticketId3',style: TextStyle(fontWeight: FontWeight.bold,fontSize: 9),)
-            ],
+          Container(
+            height: 25,
+            width: 120,
+            child: Stack(
+              children: [
+                SvgPicture.asset(
+                  'assets/icons/ticket_container.svg',
+                  fit: BoxFit.cover,
+                  width: 120,
+                ),
+                Center(child: Text('Ticket ID:$ticketId3',style: TextStyle(fontWeight: FontWeight.bold,fontSize: 9),))
+              ],
+            ),
           ),
         ],
       ),

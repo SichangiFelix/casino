@@ -1,4 +1,6 @@
+import 'package:casino/screens/choose_number_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 
 class PLayDraw extends StatelessWidget {
   const PLayDraw({Key? key}) : super(key: key);
@@ -26,10 +28,15 @@ class PLayDraw extends StatelessWidget {
                 Container(
                   height: 60,
                   padding: const EdgeInsets.all(8),
-                  color: Colors.red,
-                ),
+                  color: Colors.transparent,
+              child: SvgPicture.asset('assets/images/group3.svg',fit: BoxFit.contain,height: 50,width: width*0.2,),),
+
+
                 Text('R78 Million Win \n BTC',style: TextStyle(fontWeight: FontWeight.bold),),
-                ElevatedButton(onPressed: (){}, child: Text('Play now',style: TextStyle(color: Colors.white))),
+                ElevatedButton(onPressed: (){
+                  Navigator.push(context, MaterialPageRoute(builder: (context)=>ChooseNumberScreen()));
+
+                }, child: Text('Play now',style: TextStyle(color: Colors.white))),
                 Text('Next Draw',style: TextStyle(color: Colors.grey),),
                 Text('8:25:43:12',style: TextStyle(fontWeight: FontWeight.bold),),
 
@@ -49,12 +56,17 @@ class PLayDraw extends StatelessWidget {
                 Container(
                   height: 60,
                   padding: const EdgeInsets.all(8),
-                  color: Colors.red,
-                ),
-                Text('R78 Million Win \n BTC',style: TextStyle(fontWeight: FontWeight.bold),),
-                ElevatedButton(onPressed: (){}, child: Text('Play now',style: TextStyle(color: Colors.white))),
+                  color: Colors.transparent,
+              child: SvgPicture.asset('assets/images/group3.svg',fit: BoxFit.contain,height: 50,width: width*0.2,),),
+
+
+                Text('R22 Million Win \n BTC',style: TextStyle(fontWeight: FontWeight.bold),),
+                ElevatedButton(onPressed: (){
+                  Navigator.push(context, MaterialPageRoute(builder: (context)=>ChooseNumberScreen()));
+
+                }, child: Text('Play now',style: TextStyle(color: Colors.white))),
                 Text('Next Draw',style: TextStyle(color: Colors.grey),),
-                Text('8:25:43:12',style: TextStyle(fontWeight: FontWeight.bold),),
+                Text('12 June 2021',style: TextStyle(fontWeight: FontWeight.bold),),
 
               ],
             ),
@@ -72,12 +84,16 @@ class PLayDraw extends StatelessWidget {
                 Container(
                   height: 60,
                   padding: const EdgeInsets.all(8),
-                  color: Colors.red,
-                ),
-                Text('R78 Million Win \n BTC',style: TextStyle(fontWeight: FontWeight.bold),),
-                ElevatedButton(onPressed: (){}, child: Text('Play now',style: TextStyle(color: Colors.white))),
+                  color: Colors.transparent,
+              child: SvgPicture.asset('assets/images/group3.svg',fit: BoxFit.contain,height: 50,width: width*0.2,),),
+
+
+                Text('R100 Million Win \n BTC',style: TextStyle(fontWeight: FontWeight.bold),),
+                ElevatedButton(onPressed: (){
+                  Navigator.push(context, MaterialPageRoute(builder: (context)=>ChooseNumberScreen()));
+                }, child: Text('Play now',style: TextStyle(color: Colors.white))),
                 Text('Next Draw',style: TextStyle(color: Colors.grey),),
-                Text('8:25:43:12',style: TextStyle(fontWeight: FontWeight.bold),),
+                Text('24 June 2021',style: TextStyle(fontWeight: FontWeight.bold),),
 
               ],
             ),

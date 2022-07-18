@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="334.5" height="91.5" viewBox="0 0 334.5 91.5">
+  <defs>
+    <filter id="Path_206" x="0" y="0" width="334.5" height="91.5" filterUnits="userSpaceOnUse">
+      <feOffset dy="5" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="2" result="blur"/>
+      <feFlood flood-opacity="0.031"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="Group_3664" data-name="Group 3664" transform="translate(-3900.25 -722.25)">
+    <g id="Group_3646" data-name="Group 3646" transform="translate(3880.415 3)">
+      <g transform="matrix(1, 0, 0, 1, 19.83, 719.25)" filter="url(#Path_206)">
+        <path id="Path_206-2" data-name="Path 206" d="M-587.875,506.845a9,9,0,0,1-9,9,9,9,0,0,1-9-9h-293v5a4.116,4.116,0,0,1,4,4,4.116,4.116,0,0,1-4,4v5c2.123,0,4,.878,4,3a4.116,4.116,0,0,1-4,4v5a4.116,4.116,0,0,1,4,4,4.116,4.116,0,0,1-4,4v4a4.116,4.116,0,0,1,4,4,4.116,4.116,0,0,1-4,4v5c2.123,0,4,.878,4,3a4.116,4.116,0,0,1-4,4v5a4.116,4.116,0,0,1,4,4,4.116,4.116,0,0,1-4,4v4h293a9,9,0,0,1,9-9,9,9,0,0,1,9,9h11v-79Z" transform="translate(905.13 -505.59)" fill="#fff" stroke="#f2a902" stroke-miterlimit="10" stroke-width="0.5"/>
+      </g>
+      <line id="Line_24" data-name="Line 24" y2="23" transform="translate(235.085 752.5)" fill="#fff" stroke="#f2a902" stroke-miterlimit="10" stroke-width="0.5"/>
+    </g>
+  </g>
+</svg>

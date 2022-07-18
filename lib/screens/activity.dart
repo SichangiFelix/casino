@@ -1,8 +1,10 @@
+import 'package:casino/constants/colors.dart';
 import 'package:casino/widgets/latest_draw.dart';
 import 'package:casino/widgets/latest_winners.dart';
 import 'package:casino/widgets/play_draw.dart';
 import 'package:casino/widgets/winning_tickets.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 
 class Activity extends StatelessWidget {
   const Activity({Key? key}) : super(key: key);
@@ -13,30 +15,20 @@ class Activity extends StatelessWidget {
     var width =MediaQuery.of(context).size.width;
     var height=MediaQuery.of(context).size.height;
     return Scaffold(
+      backgroundColor: Colors.white,
       body:  SafeArea(
         child: Stack(
           children: [
-            Container(
-              height: height,
-             decoration:const BoxDecoration(
-               gradient: LinearGradient(
-                   begin: Alignment.topRight,
-                   end: Alignment.bottomLeft,
-                   colors: [
-                 Colors.deepPurple,
-                 Colors.white
-               ])
-             ),
-            ),
+            SvgPicture.asset('assets/images/bg2.svg',height: height*0.13,),
             SingleChildScrollView(
               child: Column(
                 children: [
                   ListTile(
-                    tileColor: Colors.transparent,
+                    tileColor: scaffoldColor,
                     leading:IconButton(icon: const Icon(Icons.menu,color: Colors.white,),onPressed: (){
                       Scaffold.of(context).openDrawer();
                     },) ,
-                    trailing: IconButton(icon: const Icon(Icons.circle_notifications_outlined,color: Colors.white,size: 30,),onPressed: (){},),
+                    trailing: IconButton(icon:  SvgPicture.asset('assets/icons/notification.svg',),onPressed: (){},),
                   ),
 
                   Container(

@@ -63,7 +63,7 @@ class _HomeState extends State<Home> {
       bottomNavigationBar: CupertinoTabBar(
         backgroundColor: Colors.white,
          inactiveColor: Colors.grey,
-        activeColor: Colors.green,
+        activeColor: Colors.amber,
 
         currentIndex: pageIndex,
         onTap: onTap,
@@ -115,13 +115,16 @@ class _HomeState extends State<Home> {
               margin: EdgeInsets.only(left: 15,top: 10),
               child: Row(
                 children: [
-                  CircleAvatar(radius: 34,backgroundColor: Colors.amber,),
+                  CircleAvatar(radius: 34,backgroundColor: Colors.amber,
+                child: Image.network('https://i.pinimg.com/736x/db/c2/3a/dbc23aa0d94e95eac90f5eca466b26a9.jpg',fit: BoxFit.cover,width: 37,),),
+
+
                   SizedBox(width: 10,),
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children:const [
-                       Text('Name ',style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold),) ,
-                       Text('name@gmail.com',style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold))
+                       Text('Camilla Cabelo ',style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold),) ,
+                       Text('camillacabelo@gmail.com',style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold))
                     ],
                   )
                 ],

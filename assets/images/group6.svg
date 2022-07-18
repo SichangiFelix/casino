@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="113.5" height="37.5" viewBox="0 0 113.5 37.5">
+  <defs>
+    <filter id="Path_206" x="0" y="0" width="113.5" height="37.5" filterUnits="userSpaceOnUse">
+      <feOffset dy="5" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="2" result="blur"/>
+      <feFlood flood-opacity="0.031"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="Group_3660" data-name="Group 3660" transform="translate(-24.086 -578.873)">
+    <g transform="matrix(1, 0, 0, 1, 24.09, 578.87)" filter="url(#Path_206)">
+      <path id="Path_206-2" data-name="Path 206" d="M-801.624,506.845c0,1.556-1.444,2-3,2s-3-.444-3-2h-91v1a.886.886,0,0,1,1,1c0,.664-.336,2-1,2v1a.886.886,0,0,1,1,1c0,.664-.336,2-1,2v1a.886.886,0,0,1,1,1,.886.886,0,0,1-1,1v2a.886.886,0,0,1,1,1,.886.886,0,0,1-1,1v2a.886.886,0,0,1,1,1,.886.886,0,0,1-1,1v2a.886.886,0,0,1,1,1,.886.886,0,0,1-1,1v2h91a3.14,3.14,0,0,1,3-3,3.139,3.139,0,0,1,3,3h4v-25Z" transform="translate(904.87 -505.6)" fill="#fff" stroke="#f2a902" stroke-miterlimit="10" stroke-width="0.5"/>
+    </g>
+    <text id="Ticket_ID:_HYBNT22001F9_" data-name="Ticket ID: HYBNT22001F9#" transform="translate(42.836 594.623)" fill="#110a00" font-size="6" font-family="Poppins-Bold, Poppins" font-weight="700" style="isolation: isolate"><tspan x="0" y="0">Ticket ID: HYBNT22001F9#</tspan></text>
+  </g>
+</svg>
