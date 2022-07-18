@@ -32,13 +32,13 @@ class PaymentMethodScreen extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Container(
-              padding: const EdgeInsets.only(top: 20,left: 10,bottom: 10),
+              padding: EdgeInsets.only(top: height/40,left: 10,bottom: height/150),
               child:const Text('Your Cards',style: TextStyle(color: Colors.white,
                 fontSize: 22
               ),),
             ),
             Container(
-              margin:const EdgeInsets.only(bottom: 15),
+              margin: EdgeInsets.only(bottom: height/60),
               padding:const EdgeInsets.only(top: 20,left: 10,bottom: 10),
               child:const Text('2 Physical Card, 1 Virtual Wallet',style: TextStyle(color: Colors.white, fontSize: 16),),
             ),
@@ -47,14 +47,14 @@ class PaymentMethodScreen extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 Container(
-                  margin:const EdgeInsets.only(left: 10,bottom: 20),
+                  margin: EdgeInsets.only(left: 10,bottom: height/100),
                   width: 120,
                   padding:const EdgeInsets.only(left: 5,bottom: 10,top: 10),
                   decoration: BoxDecoration(color: Colors.orange,borderRadius: BorderRadiusDirectional.circular(8)),
                   child:const Center(child: Text('Physical Card',style: TextStyle(color: Colors.white),)),
                 ),
                 Container(
-                  margin:const EdgeInsets.only(bottom: 20,left: 7),
+                  margin: EdgeInsets.only(bottom: height/100,left: 7),
                   padding:const EdgeInsets.only(left: 5,bottom: 10,top: 10),
                   child:const Text('Virtual Card',style: TextStyle(color: Colors.white),),
                 ),
@@ -63,7 +63,7 @@ class PaymentMethodScreen extends StatelessWidget {
             ),
             const CardView(),
             Container(
-              padding: const EdgeInsets.only(top: 10,left: 10,bottom: 10),
+              padding: EdgeInsets.only(top: height/200,left: 10,bottom: height/200),
               child:const Text('Card Settings',style: TextStyle(color: Colors.white),),
             ),
 
@@ -73,14 +73,14 @@ class PaymentMethodScreen extends StatelessWidget {
             const SizedBox(height: 5,),
             const SetItem(iconSet: Icon(Icons.settings_outlined,color: Colors.white), headline: 'Subscription'),
 
-           const SizedBox(height: 35,),
+            SizedBox(height: height/40,),
             Align(
               alignment: Alignment.center,
                 child: InkWell(
                   onTap:()=> Navigator.push(context, MaterialPageRoute(builder: (context)=>ConfirmationScreen())),
                   child: Container(
                     alignment: Alignment.center,
-                    height: 50,
+                    height: 40,
                     width: 200,
                     decoration: BoxDecoration(
                       color: Colors.white,

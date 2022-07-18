@@ -85,13 +85,13 @@ class _ChooseNumberScreenState extends State<ChooseNumberScreen> {
                 children: const [
                   Text('Choose',
                     style: TextStyle(
-                      fontSize: 22,
+                      fontSize: 18,
                       color: Colors.white,
                     ),
                   ),
                   Text('5 numbers',
                     style: TextStyle(
-                      fontSize: 22,
+                      fontSize: 18,
                       color: Colors.white,
                     ),
                   ),
@@ -2587,7 +2587,7 @@ class _ChooseNumberScreenState extends State<ChooseNumberScreen> {
             onTap:()=> Navigator.push(context, MaterialPageRoute(builder: (context)=>PaymentScreen(selectedNumbers: selectedNumbers.toString(),))),
             child: Container(
               alignment: Alignment.center,
-              height: 50,
+              height: 40,
               width: width/1.8,
               decoration: BoxDecoration(
                 color: blueShade,
@@ -2612,7 +2612,7 @@ class _ChooseNumberScreenState extends State<ChooseNumberScreen> {
     var width =MediaQuery.of(context).size.width;
     var height=MediaQuery.of(context).size.height;
     return Container(
-      height: height/2.4,
+      height: height/2.45,
       width: width*0.97,
       decoration: BoxDecoration(
         color: Colors.white,

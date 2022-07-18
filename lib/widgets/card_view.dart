@@ -18,7 +18,7 @@ class CardView extends StatelessWidget {
           Container(
             margin:const EdgeInsets.only(right: 5),
             child: SvgPicture.asset(
-              'assets/images/card1.svg',
+              'assets/images/group1.svg',
               width: width * 0.60,
             ),
           ),

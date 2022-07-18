@@ -66,26 +66,26 @@ class Activity extends StatelessWidget {
                  Row(
                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
                    children: const [
-                     Text('Latest Winners',style: TextStyle(fontWeight: FontWeight.bold,fontSize: 18),),
-                     Text('R 1200 000 Each',style: TextStyle(fontSize: 16),),
+                     Text('Latest Winners',style: TextStyle(fontWeight: FontWeight.bold,fontSize: 16),),
+                     Text('R 1200 000 Each',style: TextStyle(fontSize: 14),),
 
                    ],
                  ),
                   const LatestWinners(),
-                  const Text('Latest Weeks Winning Tickets',style: TextStyle(fontWeight: FontWeight.bold,fontSize: 18),),
+                  const Text('Latest Weeks Winning Tickets',style: TextStyle(fontWeight: FontWeight.bold,fontSize: 16),),
                   Container(
                     margin: EdgeInsets.only(left: 15,right: 10),
                     width: width*0.95,
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        const Text('Winning Tickets',style: TextStyle(fontSize: 18,color: Colors.grey),),
+                        const Text('Winning Tickets',style: TextStyle(fontSize: 14,color: Colors.grey),),
 
                         Column(
                           children: const [
-                            Text('Amount Won Each',style: TextStyle(fontSize: 16,color: Colors.grey),),
+                            Text('Amount Won Each',style: TextStyle(fontSize: 14,color: Colors.grey),),
 
-                            Text('R 5 234 70,75',style: TextStyle(fontSize: 16),),
+                            Text('R 5 234 70,75',style: TextStyle(fontSize: 14),),
                           ],
                         ),
 

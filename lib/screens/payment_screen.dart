@@ -50,7 +50,7 @@ class _PaymentScreenState extends State<PaymentScreen> {
             Container(
               margin: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 38.0),
               padding: const EdgeInsets.symmetric(vertical: 40.0, horizontal: 10.0),
-              height: 350.0,
+              height: MediaQuery.of(context).size.height/2.1,
               decoration: const BoxDecoration(
                 borderRadius: BorderRadius.all(Radius.circular(28.0)),
                 color: Colors.white,
@@ -65,13 +65,13 @@ class _PaymentScreenState extends State<PaymentScreen> {
                     widget.selectedNumbers,
                     style: const TextStyle(fontSize: 24.0),
                   ),
-                    margin: const EdgeInsets.only(bottom: 30.0, top: 12.0),
+                    margin: EdgeInsets.only(bottom: MediaQuery.of(context).size.height/40, top: MediaQuery.of(context).size.height/60),
                   ),  //display selected numbers here
                   const Text('Number Of Draws',
                     style: TextStyle(fontSize: 18.0),
                   ),
                   Container(
-                    margin: const EdgeInsets.symmetric(vertical: 30.0),
+                    margin: EdgeInsets.symmetric(vertical: MediaQuery.of(context).size.height/40),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
@@ -123,7 +123,7 @@ class _PaymentScreenState extends State<PaymentScreen> {
                 fontSize: 16.0,
               ),
             ),
-              margin: const EdgeInsets.only(bottom: 20.0),
+              margin: EdgeInsets.only(bottom: MediaQuery.of(context).size.height/20),
             ),
             ElevatedButton(
               onPressed: () {

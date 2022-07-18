@@ -18,9 +18,9 @@ class LatestDraw extends StatelessWidget {
             margin: EdgeInsets.only(left: 10),
             padding: EdgeInsets.all(8),
             height: 100,
-            width: width *0.7,
+            width: width *0.8,
             decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(20),
+              borderRadius: BorderRadius.circular(10),
               border:const Border(
                  top: BorderSide(style: BorderStyle.solid,color: Colors.amber,),
                  bottom: BorderSide(style: BorderStyle.solid,color: Colors.amber,),
@@ -44,8 +44,8 @@ class LatestDraw extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: const [
                         Text('Mavuso Monday Money Club',style: TextStyle(fontWeight: FontWeight.bold),),
-                        Text('Draw took place on',style: TextStyle(color: Colors.grey,fontSize: 17),),
-                        Text('Monday May 21,2021',style: TextStyle(fontSize: 17,fontWeight: FontWeight.bold,),),
+                        Text('Draw took place on',style: TextStyle(color: Colors.grey,fontSize: 14),),
+                        Text('Monday May 21,2021',style: TextStyle(fontSize: 14,fontWeight: FontWeight.bold,),),
 
                       ],
                     )
@@ -93,9 +93,9 @@ class LatestDraw extends StatelessWidget {
             margin: EdgeInsets.only(left: 10),
             padding: EdgeInsets.all(8),
             height: 100,
-            width: width *0.7,
+            width: width *0.8,
             decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(20),
+              borderRadius: BorderRadius.circular(10),
               border:const Border(
                 top: BorderSide(style: BorderStyle.solid,color: Colors.amber,),
                 bottom: BorderSide(style: BorderStyle.solid,color: Colors.amber,),
@@ -119,8 +119,8 @@ class LatestDraw extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: const [
                         Text('Mavuso Monday Money Club',style: TextStyle(fontWeight: FontWeight.bold),),
-                        Text('Draw took place on',style: TextStyle(color: Colors.grey,fontSize: 17),),
-                        Text('Monday May 21,2021',style: TextStyle(fontSize: 17,fontWeight: FontWeight.bold,),),
+                        Text('Draw took place on',style: TextStyle(color: Colors.grey,fontSize: 14),),
+                        Text('Monday May 21,2021',style: TextStyle(fontSize: 14,fontWeight: FontWeight.bold,),),
 
                       ],
                     )

@@ -25,10 +25,9 @@ class LatestWinners extends StatelessWidget {
             ),
             child: Column(
               children: [
-                CircleAvatar(radius: 26,
-                  child: Image.network('https://i.pinimg.com/736x/db/c2/3a/dbc23aa0d94e95eac90f5eca466b26a9.jpg',fit: BoxFit.cover,width: 30,),),
-                Text('Tumpa Lehae',style: TextStyle(fontWeight: FontWeight.bold),),
-                Text('FreeState',style: TextStyle(fontSize:15,color: Colors.grey),)
+                CircleAvatar(radius: 26,),
+                Text('Tumpa Lehae',style: TextStyle(fontWeight: FontWeight.bold, fontSize: 13),),
+                Text('FreeState',style: TextStyle(fontSize:12,color: Colors.grey),)
 
               ],
             ),
@@ -44,11 +43,10 @@ class LatestWinners extends StatelessWidget {
             ),
             child: Column(
               children: [
-                CircleAvatar(radius: 26,
-              child: Image.network('https://i.pinimg.com/736x/db/c2/3a/dbc23aa0d94e95eac90f5eca466b26a9.jpg',fit: BoxFit.cover,width: 30,),),
+                CircleAvatar(radius: 26,),
 
-                Text('Tumpa Lehae',style: TextStyle(fontWeight: FontWeight.bold),),
-                Text('FreeState',style: TextStyle(fontSize:15,color: Colors.grey),)
+                Text('Tumpa Lehae',style: TextStyle(fontWeight: FontWeight.bold, fontSize: 13),),
+                Text('FreeState',style: TextStyle(fontSize:12,color: Colors.grey),)
 
               ],
             ),
@@ -63,10 +61,9 @@ class LatestWinners extends StatelessWidget {
             ),
             child: Column(
               children: [
-                CircleAvatar(radius: 26,
-                  child: Image.network('https://i.pinimg.com/736x/db/c2/3a/dbc23aa0d94e95eac90f5eca466b26a9.jpg',fit: BoxFit.cover,width: 30,),),
-                Text('Tumpa Lehae',style: TextStyle(fontWeight: FontWeight.bold),),
-                Text('FreeState',style: TextStyle(fontSize:15,color: Colors.grey),)
+                CircleAvatar(radius: 26,),
+                Text('Tumpa Lehae',style: TextStyle(fontWeight: FontWeight.bold, fontSize: 13),),
+                Text('FreeState',style: TextStyle(fontSize:12,color: Colors.grey),)
 
               ],
             ),

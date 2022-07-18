@@ -19,7 +19,7 @@ class _SetItemState extends State<SetItem> {
           borderRadius: BorderRadius.circular(15)
       ),
       padding: EdgeInsets.only(left: 10,right: 10,top: 5,),
-      height: 70,
+      height: MediaQuery.of(context).size.height/15,
       child: Row(
         children: [
           Container(
@@ -32,10 +32,7 @@ class _SetItemState extends State<SetItem> {
             child: widget.iconSet,
           ),
           SizedBox(width: 7,),
-          Text(widget.headline,style: TextStyle(fontWeight: FontWeight.w500,color:Colors.black,fontSize: 20),),
-
-
-
+          Text(widget.headline,style: TextStyle(fontWeight: FontWeight.w500,color:Colors.black,fontSize: 18),),
           Spacer(),
           Switch(
             value: isSwitched,
