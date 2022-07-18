@@ -2575,7 +2575,7 @@ class _ChooseNumberScreenState extends State<ChooseNumberScreen> {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Text('12:00 PM'),
+                Text(DateTime.now().toString().substring(10,16)),
 
                 Text('Double'),
               ],
@@ -2665,10 +2665,12 @@ class _ChooseNumberScreenState extends State<ChooseNumberScreen> {
   }
 
    Widget fieldNumber1(String first){
+     var width = MediaQuery.of(context).size.width;
+     var height = MediaQuery.of(context).size.height;
      return Container(
        padding: EdgeInsets.only(left: 10,right: 10),
-       height: 85,
-       width: 70,
+       height: height / 9,
+       width: width / 5.8,
        child: Container(
          margin: EdgeInsets.only(top: 20,right: 5,left: 5),
          height: 70,
@@ -2690,10 +2692,12 @@ class _ChooseNumberScreenState extends State<ChooseNumberScreen> {
      );
    }
    Widget fieldNumber2(String second){
+     var width = MediaQuery.of(context).size.width;
+     var height = MediaQuery.of(context).size.height;
      return Container(
        padding: EdgeInsets.only(left: 10,right: 10),
-       height: 85,
-       width: 70,
+       height: height / 9,
+       width: width / 5.8,
 
 
 
@@ -2720,10 +2724,12 @@ class _ChooseNumberScreenState extends State<ChooseNumberScreen> {
      );
    }
    Widget fieldNumber3(String third){
+     var width = MediaQuery.of(context).size.width;
+     var height = MediaQuery.of(context).size.height;
      return Container(
        padding: EdgeInsets.only(left: 10,right: 10),
-       height: 85,
-       width: 70,
+       height: height / 9,
+       width: width / 5.8,
 
 
 
@@ -2750,10 +2756,12 @@ class _ChooseNumberScreenState extends State<ChooseNumberScreen> {
      );
    }
    Widget fieldNumber4(String fourth){
+     var width = MediaQuery.of(context).size.width;
+     var height = MediaQuery.of(context).size.height;
      return Container(
        padding: EdgeInsets.only(left: 10,right: 10),
-       height: 85,
-       width: 70,
+       height: height / 9,
+       width: width / 5.8,
 
 
 
@@ -2780,10 +2788,12 @@ class _ChooseNumberScreenState extends State<ChooseNumberScreen> {
      );
    }
    Widget fieldNumber5(String fifth){
+    var width = MediaQuery.of(context).size.width;
+    var height = MediaQuery.of(context).size.height;
      return Container(
        padding: EdgeInsets.only(left: 10,right: 10),
-       height: 85,
-       width: 70,
+       height: height / 9,
+       width: width / 5.8,
 
 
 

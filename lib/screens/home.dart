@@ -69,28 +69,26 @@ class _HomeState extends State<Home> {
         onTap: onTap,
         items:[
           BottomNavigationBarItem(
-            // label: 'Timeline',
+
             icon: SvgPicture.asset(
                 'assets/icons/home_icon.svg',
               width: 22,
             ),
           ),
           BottomNavigationBarItem(
-            // label: 'Live feed',
             icon: SvgPicture.asset(
               'assets/icons/nav_rect.svg',
               width: 28,
             ),
           ),
           BottomNavigationBarItem(
-            // label: 'Upload',
+
             icon: SvgPicture.asset(
               'assets/icons/message_icon.svg',
               width: 26,
             ),
           ),
           BottomNavigationBarItem(
-            // label: 'Search',
             icon: SvgPicture.asset(
               'assets/icons/favorites_icon.svg',
               width: 24,
