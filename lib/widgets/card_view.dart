@@ -15,13 +15,19 @@ class CardView extends StatelessWidget {
       child: ListView(
         scrollDirection: Axis.horizontal,
         children: [
-          SvgPicture.asset(
-            'assets/images/card1.svg',
-            width: width * 0.60,
+          Container(
+            margin:const EdgeInsets.only(right: 5),
+            child: SvgPicture.asset(
+              'assets/images/card1.svg',
+              width: width * 0.60,
+            ),
           ),
-          SvgPicture.asset(
-            'assets/images/card2.svg',
-            width: width * 0.60,
+          Container(
+            margin:const EdgeInsets.only(right: 5),
+            child: SvgPicture.asset(
+              'assets/images/card2.svg',
+              width: width * 0.60,
+            ),
           ),
         ],
       ),

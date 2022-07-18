@@ -2668,7 +2668,7 @@ class _ChooseNumberScreenState extends State<ChooseNumberScreen> {
      return Container(
        padding: EdgeInsets.only(left: 10,right: 10),
        height: 85,
-       width: 80,
+       width: 70,
        child: Container(
          margin: EdgeInsets.only(top: 20,right: 5,left: 5),
          height: 70,
@@ -2693,7 +2693,7 @@ class _ChooseNumberScreenState extends State<ChooseNumberScreen> {
      return Container(
        padding: EdgeInsets.only(left: 10,right: 10),
        height: 85,
-       width: 80,
+       width: 70,
 
 
 
@@ -2723,7 +2723,7 @@ class _ChooseNumberScreenState extends State<ChooseNumberScreen> {
      return Container(
        padding: EdgeInsets.only(left: 10,right: 10),
        height: 85,
-       width: 80,
+       width: 70,
 
 
 
@@ -2753,7 +2753,7 @@ class _ChooseNumberScreenState extends State<ChooseNumberScreen> {
      return Container(
        padding: EdgeInsets.only(left: 10,right: 10),
        height: 85,
-       width: 80,
+       width: 70,
 
 
 
@@ -2783,7 +2783,7 @@ class _ChooseNumberScreenState extends State<ChooseNumberScreen> {
      return Container(
        padding: EdgeInsets.only(left: 10,right: 10),
        height: 85,
-       width: 80,
+       width: 70,
 
 
 

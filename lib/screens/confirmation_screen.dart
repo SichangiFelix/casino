@@ -42,9 +42,9 @@ class ConfirmationScreen extends StatelessWidget {
           children: [
             Container(
               margin: const EdgeInsets.only(top: 40),
-              child: const Center(
+              child:  Center(
                   child: Text(
-                '2.00 PM',
+                DateTime.now().toString().substring(10,16),
                 style: TextStyle(color: Colors.white,
                   fontSize: 22,
                 ),
@@ -65,7 +65,7 @@ class ConfirmationScreen extends StatelessWidget {
                 children: [
                   SvgPicture.asset(
                     'assets/icons/like.svg',
-                    width: 100,
+                    width:70,
                   ),
                   Container(
                       margin: const EdgeInsets.only(top: 10, bottom: 10),
@@ -80,13 +80,13 @@ class ConfirmationScreen extends StatelessWidget {
                     'You have successfully \nPurchased your tickets',
                     style: TextStyle(color: Colors.grey),
                   ),
-                  Ticket(ticketId: '32FGK2001F9#', date: '21 OCT 2021', validDraws: 1,),
-                  Ticket(ticketId: '32FGK33001G3#', date: '04 NOV 2021', validDraws: 1,),
+                  Ticket( validDraws: 1,),
+                  Ticket( validDraws: 1,),
                 ],
               ),
             ),
-            const SizedBox(
-              height: 30,
+             SizedBox(
+              height:height*0.05 ,
             ),
             Align(
                 alignment: Alignment.center,
