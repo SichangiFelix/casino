@@ -275,7 +275,7 @@ class _ChooseNumberScreenState extends State<ChooseNumberScreen> {
          child:  Center(child:
          Text(assignedNumber,
            style: TextStyle(
-           color: selected1 ? Colors.white:Colors.black54,
+           color: selected2 ? Colors.white:Colors.black54,
            fontSize: 20,
            fontWeight: FontWeight.w600,
          ),
@@ -356,7 +356,7 @@ class _ChooseNumberScreenState extends State<ChooseNumberScreen> {
          child:  Center(child:
          Text(assignedNumber,
            style: TextStyle(
-             color: selected1 ? Colors.white:Colors.black54,
+             color: selected3 ? Colors.white:Colors.black54,
              fontSize: 20,
              fontWeight: FontWeight.w600,
            ),
@@ -437,7 +437,7 @@ class _ChooseNumberScreenState extends State<ChooseNumberScreen> {
          child:  Center(child:
          Text(assignedNumber,
            style: TextStyle(
-             color: selected1 ? Colors.white:Colors.black54,
+             color: selected4 ? Colors.white:Colors.black54,
              fontSize: 20,
              fontWeight: FontWeight.w600,
            ),
@@ -518,7 +518,7 @@ class _ChooseNumberScreenState extends State<ChooseNumberScreen> {
          child:  Center(child:
          Text(assignedNumber,
            style: TextStyle(
-             color: selected1 ? Colors.white:Colors.black54,
+             color: selected5 ? Colors.white:Colors.black54,
              fontSize: 20,
              fontWeight: FontWeight.w600,
            ),
@@ -599,7 +599,7 @@ class _ChooseNumberScreenState extends State<ChooseNumberScreen> {
          child:  Center(child:
          Text(assignedNumber,
            style: TextStyle(
-             color: selected1 ? Colors.white:Colors.black54,
+             color: selected6 ? Colors.white:Colors.black54,
              fontSize: 20,
              fontWeight: FontWeight.w600,
            ),
@@ -680,7 +680,7 @@ class _ChooseNumberScreenState extends State<ChooseNumberScreen> {
          child:  Center(child:
          Text(assignedNumber,
            style: TextStyle(
-             color: selected1 ? Colors.white:Colors.black54,
+             color: selected7 ? Colors.white:Colors.black54,
              fontSize: 20,
              fontWeight: FontWeight.w600,
            ),
@@ -761,7 +761,7 @@ class _ChooseNumberScreenState extends State<ChooseNumberScreen> {
          child:  Center(child:
          Text(assignedNumber,
            style: TextStyle(
-             color: selected1 ? Colors.white:Colors.black54,
+             color: selected8 ? Colors.white:Colors.black54,
              fontSize: 20,
              fontWeight: FontWeight.w600,
            ),
@@ -842,7 +842,7 @@ class _ChooseNumberScreenState extends State<ChooseNumberScreen> {
          child:  Center(child:
          Text(assignedNumber,
            style: TextStyle(
-             color: selected1 ? Colors.white:Colors.black54,
+             color: selected9 ? Colors.white:Colors.black54,
              fontSize: 20,
              fontWeight: FontWeight.w600,
            ),
@@ -923,7 +923,7 @@ class _ChooseNumberScreenState extends State<ChooseNumberScreen> {
          child:  Center(child:
          Text(assignedNumber,
            style: TextStyle(
-             color: selected1 ? Colors.white:Colors.black54,
+             color: selected10 ? Colors.white:Colors.black54,
              fontSize: 20,
              fontWeight: FontWeight.w600,
            ),
@@ -1004,7 +1004,7 @@ class _ChooseNumberScreenState extends State<ChooseNumberScreen> {
          child:  Center(child:
          Text(assignedNumber,
            style: TextStyle(
-             color: selected1 ? Colors.white:Colors.black54,
+             color: selected11 ? Colors.white:Colors.black54,
              fontSize: 20,
              fontWeight: FontWeight.w600,
            ),
@@ -1085,7 +1085,7 @@ class _ChooseNumberScreenState extends State<ChooseNumberScreen> {
          child:  Center(child:
          Text(assignedNumber,
            style: TextStyle(
-             color: selected1 ? Colors.white:Colors.black54,
+             color: selected12 ? Colors.white:Colors.black54,
              fontSize: 20,
              fontWeight: FontWeight.w600,
            ),
@@ -1166,7 +1166,7 @@ class _ChooseNumberScreenState extends State<ChooseNumberScreen> {
          child:  Center(child:
          Text(assignedNumber,
            style: TextStyle(
-             color: selected1 ? Colors.white:Colors.black54,
+             color: selected13 ? Colors.white:Colors.black54,
              fontSize: 20,
              fontWeight: FontWeight.w600,
            ),
@@ -1247,7 +1247,7 @@ class _ChooseNumberScreenState extends State<ChooseNumberScreen> {
          child:  Center(child:
          Text(assignedNumber,
            style: TextStyle(
-             color: selected1 ? Colors.white:Colors.black54,
+             color: selected14 ? Colors.white:Colors.black54,
              fontSize: 20,
              fontWeight: FontWeight.w600,
            ),
@@ -1328,7 +1328,7 @@ class _ChooseNumberScreenState extends State<ChooseNumberScreen> {
          child:  Center(child:
          Text(assignedNumber,
            style: TextStyle(
-             color: selected1 ? Colors.white:Colors.black54,
+             color: selected15 ? Colors.white:Colors.black54,
              fontSize: 20,
              fontWeight: FontWeight.w600,
            ),
@@ -1409,7 +1409,7 @@ class _ChooseNumberScreenState extends State<ChooseNumberScreen> {
          child:  Center(child:
          Text(assignedNumber,
            style: TextStyle(
-             color: selected1 ? Colors.white:Colors.black54,
+             color: selected16 ? Colors.white:Colors.black54,
              fontSize: 20,
              fontWeight: FontWeight.w600,
            ),
@@ -1490,7 +1490,7 @@ class _ChooseNumberScreenState extends State<ChooseNumberScreen> {
          child:  Center(child:
          Text(assignedNumber,
            style: TextStyle(
-             color: selected1 ? Colors.white:Colors.black54,
+             color: selected17 ? Colors.white:Colors.black54,
              fontSize: 20,
              fontWeight: FontWeight.w600,
            ),
@@ -1571,7 +1571,7 @@ class _ChooseNumberScreenState extends State<ChooseNumberScreen> {
          child:  Center(child:
          Text(assignedNumber,
            style: TextStyle(
-             color: selected1 ? Colors.white:Colors.black54,
+             color: selected18 ? Colors.white:Colors.black54,
              fontSize: 20,
              fontWeight: FontWeight.w600,
            ),
@@ -1652,7 +1652,7 @@ class _ChooseNumberScreenState extends State<ChooseNumberScreen> {
          child:  Center(child:
          Text(assignedNumber,
            style: TextStyle(
-             color: selected1 ? Colors.white:Colors.black54,
+             color: selected19 ? Colors.white:Colors.black54,
              fontSize: 20,
              fontWeight: FontWeight.w600,
            ),
@@ -1733,7 +1733,7 @@ class _ChooseNumberScreenState extends State<ChooseNumberScreen> {
          child:  Center(child:
          Text(assignedNumber,
            style: TextStyle(
-             color: selected1 ? Colors.white:Colors.black54,
+             color: selected20 ? Colors.white:Colors.black54,
              fontSize: 20,
              fontWeight: FontWeight.w600,
            ),
@@ -1814,7 +1814,7 @@ class _ChooseNumberScreenState extends State<ChooseNumberScreen> {
          child:  Center(child:
          Text(assignedNumber,
            style: TextStyle(
-             color: selected1 ? Colors.white:Colors.black54,
+             color: selected21 ? Colors.white:Colors.black54,
              fontSize: 20,
              fontWeight: FontWeight.w600,
            ),
@@ -1895,7 +1895,7 @@ class _ChooseNumberScreenState extends State<ChooseNumberScreen> {
          child:  Center(child:
          Text(assignedNumber,
            style: TextStyle(
-             color: selected1 ? Colors.white:Colors.black54,
+             color: selected22 ? Colors.white:Colors.black54,
              fontSize: 20,
              fontWeight: FontWeight.w600,
            ),
@@ -1976,7 +1976,7 @@ class _ChooseNumberScreenState extends State<ChooseNumberScreen> {
          child:  Center(child:
          Text(assignedNumber,
            style: TextStyle(
-             color: selected1 ? Colors.white:Colors.black54,
+             color: selected23 ? Colors.white:Colors.black54,
              fontSize: 20,
              fontWeight: FontWeight.w600,
            ),
@@ -2057,7 +2057,7 @@ class _ChooseNumberScreenState extends State<ChooseNumberScreen> {
          child:  Center(child:
          Text(assignedNumber,
            style: TextStyle(
-             color: selected1 ? Colors.white:Colors.black54,
+             color: selected24 ? Colors.white:Colors.black54,
              fontSize: 20,
              fontWeight: FontWeight.w600,
            ),
@@ -2138,7 +2138,7 @@ class _ChooseNumberScreenState extends State<ChooseNumberScreen> {
          child:  Center(child:
          Text(assignedNumber,
            style: TextStyle(
-             color: selected1 ? Colors.white:Colors.black54,
+             color: selected25 ? Colors.white:Colors.black54,
              fontSize: 20,
              fontWeight: FontWeight.w600,
            ),
@@ -2219,7 +2219,7 @@ class _ChooseNumberScreenState extends State<ChooseNumberScreen> {
          child:  Center(child:
          Text(assignedNumber,
            style: TextStyle(
-             color: selected1 ? Colors.white:Colors.black54,
+             color: selected26 ? Colors.white:Colors.black54,
              fontSize: 20,
              fontWeight: FontWeight.w600,
            ),
@@ -2300,7 +2300,7 @@ class _ChooseNumberScreenState extends State<ChooseNumberScreen> {
          child:  Center(child:
          Text(assignedNumber,
            style: TextStyle(
-             color: selected1 ? Colors.white:Colors.black54,
+             color: selected27 ? Colors.white:Colors.black54,
              fontSize: 20,
              fontWeight: FontWeight.w600,
            ),
@@ -2381,7 +2381,7 @@ class _ChooseNumberScreenState extends State<ChooseNumberScreen> {
          child:  Center(child:
          Text(assignedNumber,
            style: TextStyle(
-             color: selected1 ? Colors.white:Colors.black54,
+             color: selected28 ? Colors.white:Colors.black54,
              fontSize: 20,
              fontWeight: FontWeight.w600,
            ),
@@ -2462,7 +2462,7 @@ class _ChooseNumberScreenState extends State<ChooseNumberScreen> {
          child:  Center(child:
          Text(assignedNumber,
            style: TextStyle(
-             color: selected1 ? Colors.white:Colors.black54,
+             color: selected29 ? Colors.white:Colors.black54,
              fontSize: 20,
              fontWeight: FontWeight.w600,
            ),
@@ -2543,7 +2543,7 @@ class _ChooseNumberScreenState extends State<ChooseNumberScreen> {
          child:  Center(child:
          Text(assignedNumber,
            style: TextStyle(
-             color: selected1 ? Colors.white:Colors.black54,
+             color: selected30 ? Colors.white:Colors.black54,
              fontSize: 20,
              fontWeight: FontWeight.w600,
            ),

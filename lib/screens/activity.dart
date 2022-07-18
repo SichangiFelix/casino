@@ -22,6 +22,7 @@ class Activity extends StatelessWidget {
             SvgPicture.asset('assets/images/bg2.svg',height: height*0.13,),
             SingleChildScrollView(
               child: Column(
+
                 children: [
                   ListTile(
                     tileColor: scaffoldColor,
@@ -59,7 +60,8 @@ class Activity extends StatelessWidget {
                   ),
 
                 const PLayDraw(),
-                  const Text('Latest Draw',style: TextStyle(fontWeight: FontWeight.bold,fontSize: 18),),
+                  Container(
+                      child: const Text('Latest Draw',style: TextStyle(fontWeight: FontWeight.bold,fontSize: 18),)),
                   const LatestDraw(),
                  Row(
                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -72,7 +74,8 @@ class Activity extends StatelessWidget {
                   const LatestWinners(),
                   const Text('Latest Weeks Winning Tickets',style: TextStyle(fontWeight: FontWeight.bold,fontSize: 18),),
                   Container(
-                    width: width*0.8,
+                    margin: EdgeInsets.only(left: 15,right: 10),
+                    width: width*0.95,
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
