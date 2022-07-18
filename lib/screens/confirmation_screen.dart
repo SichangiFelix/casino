@@ -41,7 +41,7 @@ class ConfirmationScreen extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             Container(
-              margin: const EdgeInsets.only(top: 40),
+              margin: EdgeInsets.only(top: height/50),
               child:  Center(
                   child: Text(
                 DateTime.now().toString().substring(10,16),
@@ -65,7 +65,7 @@ class ConfirmationScreen extends StatelessWidget {
                 children: [
                   SvgPicture.asset(
                     'assets/icons/like.svg',
-                    width:70,
+                    width: height/14,
                   ),
                   Container(
                       margin: const EdgeInsets.only(top: 10, bottom: 10),
@@ -74,7 +74,7 @@ class ConfirmationScreen extends StatelessWidget {
                         style: TextStyle(
                             fontWeight: FontWeight.w500,
                             color: Colors.black,
-                            fontSize: 30),
+                            fontSize: 26),
                       )),
                   const Text(
                     'You have successfully \nPurchased your tickets',
@@ -95,7 +95,7 @@ class ConfirmationScreen extends StatelessWidget {
                       context, MaterialPageRoute(builder: (context) => Home())),
                   child: Container(
                     alignment: Alignment.center,
-                    height: 50,
+                    height: 40,
                     width: 200,
                     decoration: BoxDecoration(
                       color: Colors.white,

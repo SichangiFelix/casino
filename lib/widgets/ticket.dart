@@ -70,8 +70,8 @@ class _TicketState extends State<Ticket> {
             width: 420,
           ),
           Positioned(
-            left: 26,
-            top: 20,
+            left: 18,
+            top: 12,
             child: Row(
               children: [
                 QrImage(
