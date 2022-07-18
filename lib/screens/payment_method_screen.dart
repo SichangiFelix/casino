@@ -63,7 +63,7 @@ class PaymentMethodScreen extends StatelessWidget {
             ),
             const CardView(),
             Container(
-              padding: EdgeInsets.only(top: height/200,left: 10,bottom: height/200),
+              padding: EdgeInsets.only(top: height/200,left: 10,bottom: height/120),
               child:const Text('Card Settings',style: TextStyle(color: Colors.white),),
             ),
 
