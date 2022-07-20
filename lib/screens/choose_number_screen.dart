@@ -142,7 +142,7 @@ class _ChooseNumberScreenState extends State<ChooseNumberScreen> {
 
           });
         }
-          if( secondNo != '0' && thirdNo =='0'){
+          else if( secondNo != '0' && thirdNo =='0'){
           setState(() {
             this.thirdNo = assignedNumber;
             selected1=true;
@@ -226,7 +226,7 @@ class _ChooseNumberScreenState extends State<ChooseNumberScreen> {
 
            });
          }
-         if( secondNo != '0' && thirdNo =='0'){
+         else if( secondNo != '0' && thirdNo =='0'){
            setState(() {
              this.thirdNo = assignedNumber;
              selected2=true;
@@ -309,7 +309,7 @@ class _ChooseNumberScreenState extends State<ChooseNumberScreen> {
 
            });
          }
-         if( secondNo != '0' && thirdNo =='0'){
+         else if( secondNo != '0' && thirdNo =='0'){
            setState(() {
              this.thirdNo = assignedNumber;
              selected3=true;
@@ -390,7 +390,7 @@ class _ChooseNumberScreenState extends State<ChooseNumberScreen> {
 
            });
          }
-         if( secondNo != '0' && thirdNo =='0'){
+         else if( secondNo != '0' && thirdNo =='0'){
            setState(() {
              this.thirdNo = assignedNumber;
              selected4=true;
@@ -471,7 +471,7 @@ class _ChooseNumberScreenState extends State<ChooseNumberScreen> {
 
            });
          }
-         if( secondNo != '0' && thirdNo =='0'){
+         else if( secondNo != '0' && thirdNo =='0'){
            setState(() {
              this.thirdNo = assignedNumber;
              selected5=true;
@@ -552,7 +552,7 @@ class _ChooseNumberScreenState extends State<ChooseNumberScreen> {
 
            });
          }
-         if( secondNo != '0' && thirdNo =='0'){
+         else if( secondNo != '0' && thirdNo =='0'){
            setState(() {
              this.thirdNo = assignedNumber;
              selected6=true;
@@ -633,7 +633,7 @@ class _ChooseNumberScreenState extends State<ChooseNumberScreen> {
 
            });
          }
-         if( secondNo != '0' && thirdNo =='0'){
+         else if( secondNo != '0' && thirdNo =='0'){
            setState(() {
              this.thirdNo = assignedNumber;
              selected7=true;
@@ -714,7 +714,7 @@ class _ChooseNumberScreenState extends State<ChooseNumberScreen> {
 
            });
          }
-         if( secondNo != '0' && thirdNo =='0'){
+         else if( secondNo != '0' && thirdNo =='0'){
            setState(() {
              this.thirdNo = assignedNumber;
              selected8=true;
@@ -795,7 +795,7 @@ class _ChooseNumberScreenState extends State<ChooseNumberScreen> {
 
            });
          }
-         if( secondNo != '0' && thirdNo =='0'){
+         else if( secondNo != '0' && thirdNo =='0'){
            setState(() {
              this.thirdNo = assignedNumber;
              selected9=true;
@@ -876,7 +876,7 @@ class _ChooseNumberScreenState extends State<ChooseNumberScreen> {
 
            });
          }
-         if( secondNo != '0' && thirdNo =='0'){
+         else if( secondNo != '0' && thirdNo =='0'){
            setState(() {
              this.thirdNo = assignedNumber;
              selected10=true;
@@ -957,7 +957,7 @@ class _ChooseNumberScreenState extends State<ChooseNumberScreen> {
 
            });
          }
-         if( secondNo != '0' && thirdNo =='0'){
+         else if( secondNo != '0' && thirdNo =='0'){
            setState(() {
              this.thirdNo = assignedNumber;
              selected11=true;
@@ -1038,7 +1038,7 @@ class _ChooseNumberScreenState extends State<ChooseNumberScreen> {
 
            });
          }
-         if( secondNo != '0' && thirdNo =='0'){
+         else if( secondNo != '0' && thirdNo =='0'){
            setState(() {
              this.thirdNo = assignedNumber;
              selected12=true;
@@ -1119,7 +1119,7 @@ class _ChooseNumberScreenState extends State<ChooseNumberScreen> {
 
            });
          }
-         if( secondNo != '0' && thirdNo =='0'){
+         else if( secondNo != '0' && thirdNo =='0'){
            setState(() {
              this.thirdNo = assignedNumber;
              selected13=true;
@@ -1200,7 +1200,7 @@ class _ChooseNumberScreenState extends State<ChooseNumberScreen> {
 
            });
          }
-         if( secondNo != '0' && thirdNo =='0'){
+         else if( secondNo != '0' && thirdNo =='0'){
            setState(() {
              this.thirdNo = assignedNumber;
              selected14=true;
@@ -1281,7 +1281,7 @@ class _ChooseNumberScreenState extends State<ChooseNumberScreen> {
 
            });
          }
-         if( secondNo != '0' && thirdNo =='0'){
+         else if( secondNo != '0' && thirdNo =='0'){
            setState(() {
              this.thirdNo = assignedNumber;
              selected15=true;
@@ -1362,7 +1362,7 @@ class _ChooseNumberScreenState extends State<ChooseNumberScreen> {
 
            });
          }
-         if( secondNo != '0' && thirdNo =='0'){
+         else if( secondNo != '0' && thirdNo =='0'){
            setState(() {
              this.thirdNo = assignedNumber;
              selected16=true;
@@ -1443,7 +1443,7 @@ class _ChooseNumberScreenState extends State<ChooseNumberScreen> {
 
            });
          }
-         if( secondNo != '0' && thirdNo =='0'){
+         else if( secondNo != '0' && thirdNo =='0'){
            setState(() {
              this.thirdNo = assignedNumber;
              selected17=true;
@@ -1524,7 +1524,7 @@ class _ChooseNumberScreenState extends State<ChooseNumberScreen> {
 
            });
          }
-         if( secondNo != '0' && thirdNo =='0'){
+         else if( secondNo != '0' && thirdNo =='0'){
            setState(() {
              this.thirdNo = assignedNumber;
              selected18=true;
@@ -1605,7 +1605,7 @@ class _ChooseNumberScreenState extends State<ChooseNumberScreen> {
 
            });
          }
-         if( secondNo != '0' && thirdNo =='0'){
+         else if( secondNo != '0' && thirdNo =='0'){
            setState(() {
              this.thirdNo = assignedNumber;
              selected19=true;
@@ -1686,7 +1686,7 @@ class _ChooseNumberScreenState extends State<ChooseNumberScreen> {
 
            });
          }
-         if( secondNo != '0' && thirdNo =='0'){
+         else if( secondNo != '0' && thirdNo =='0'){
            setState(() {
              this.thirdNo = assignedNumber;
              selected20=true;
@@ -1767,7 +1767,7 @@ class _ChooseNumberScreenState extends State<ChooseNumberScreen> {
 
            });
          }
-         if( secondNo != '0' && thirdNo =='0'){
+        else if( secondNo != '0' && thirdNo =='0'){
            setState(() {
              this.thirdNo = assignedNumber;
              selected21=true;
@@ -1848,7 +1848,7 @@ class _ChooseNumberScreenState extends State<ChooseNumberScreen> {
 
            });
          }
-         if( secondNo != '0' && thirdNo =='0'){
+         else if( secondNo != '0' && thirdNo =='0'){
            setState(() {
              this.thirdNo = assignedNumber;
              selected22=true;
@@ -1929,7 +1929,7 @@ class _ChooseNumberScreenState extends State<ChooseNumberScreen> {
 
            });
          }
-         if( secondNo != '0' && thirdNo =='0'){
+         else if( secondNo != '0' && thirdNo =='0'){
            setState(() {
              this.thirdNo = assignedNumber;
              selected23=true;
@@ -2010,7 +2010,7 @@ class _ChooseNumberScreenState extends State<ChooseNumberScreen> {
 
            });
          }
-         if( secondNo != '0' && thirdNo =='0'){
+         else if( secondNo != '0' && thirdNo =='0'){
            setState(() {
              this.thirdNo = assignedNumber;
              selected24=true;
@@ -2091,7 +2091,7 @@ class _ChooseNumberScreenState extends State<ChooseNumberScreen> {
 
            });
          }
-         if( secondNo != '0' && thirdNo =='0'){
+         else if( secondNo != '0' && thirdNo =='0'){
            setState(() {
              this.thirdNo = assignedNumber;
              selected25=true;
@@ -2172,7 +2172,7 @@ class _ChooseNumberScreenState extends State<ChooseNumberScreen> {
 
            });
          }
-         if( secondNo != '0' && thirdNo =='0'){
+         else if( secondNo != '0' && thirdNo =='0'){
            setState(() {
              this.thirdNo = assignedNumber;
              selected26=true;
@@ -2253,14 +2253,14 @@ class _ChooseNumberScreenState extends State<ChooseNumberScreen> {
 
            });
          }
-         if( secondNo != '0' && thirdNo =='0'){
+         else if( secondNo != '0' && thirdNo =='0'){
            setState(() {
              this.thirdNo = assignedNumber;
              selected27=true;
              selectedNumbers.add(27);
              print(selectedNumbers);
            });
-         }else if(thirdNo != '0' && fourthNo =='0'){
+         }else if(thirdNo != '0' && fourthNo =='0') {
            setState(() {
              this.fourthNo = assignedNumber;
              selected27=true;
@@ -2334,7 +2334,7 @@ class _ChooseNumberScreenState extends State<ChooseNumberScreen> {
 
            });
          }
-         if( secondNo != '0' && thirdNo =='0'){
+         else if( secondNo != '0' && thirdNo =='0'){
            setState(() {
              this.thirdNo = assignedNumber;
              selected28=true;
@@ -2415,7 +2415,7 @@ class _ChooseNumberScreenState extends State<ChooseNumberScreen> {
 
            });
          }
-         if( secondNo != '0' && thirdNo =='0'){
+         else if( secondNo != '0' && thirdNo =='0'){
            setState(() {
              this.thirdNo = assignedNumber;
              selected29=true;
@@ -2496,7 +2496,7 @@ class _ChooseNumberScreenState extends State<ChooseNumberScreen> {
 
            });
          }
-         if( secondNo != '0' && thirdNo =='0'){
+         else if( secondNo != '0' && thirdNo =='0'){
            setState(() {
              this.thirdNo = assignedNumber;
              selected30=true;

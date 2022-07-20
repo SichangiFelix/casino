@@ -137,12 +137,20 @@ class _RegistrationState extends State<Registration> {
                       //Logic for having accepted the terms and conditions
                     },
                   ),
-                  const Text('I accept the'),
+                  const Text('I accept the',
+                    style: TextStyle(
+                      fontSize: 13,
+                    ),
+                  ),
                   TextButton(
                     onPressed: () {
                       Navigator.pushNamed(context, Registration.id);
                     },
-                    child: const Text('Terms & Conditions'),
+                    child: const Text('Terms & Conditions',
+                      style: TextStyle(
+                        fontSize: 13,
+                      ),
+                    ),
                   )
                 ]),
                 Container(

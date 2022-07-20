@@ -13,7 +13,7 @@ class _CardViewState extends State<CardView> {
   int _selectedIndex = 0;
   @override
   Widget build(BuildContext context) {
-
+    //This gets screen dimensions
     var width = MediaQuery.of(context).size.width;
     var height = MediaQuery.of(context).size.height;
     return Container(

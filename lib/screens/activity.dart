@@ -19,8 +19,8 @@ class Activity extends StatelessWidget {
       body:  SafeArea(
         child: Stack(
           children: [
-            SvgPicture.asset('assets/images/bg2.svg',height: height*0.13,),
-            SingleChildScrollView(
+            //SvgPicture.asset('assets/images/bg2.svg',height: height*0.13,), // Replace with the correct asset
+            SingleChildScrollView (
               child: Column(
 
                 children: [
